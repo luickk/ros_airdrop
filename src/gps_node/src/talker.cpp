@@ -1,5 +1,7 @@
 #include "ros/ros.h"
+
 #include "std_msgs/String.h"
+#include "gps_node/gps_raw.h"
 
 #include "libnaza/pca9685.h"
 #include "libnaza/naza_serial_gps.h"
@@ -12,15 +14,14 @@
 int main(int argc, char **argv)
 {
   int fd;
-  std::string gpsData = "";
 
   ros::init(argc, argv, "talker");
 
-
   ros::NodeHandle n;
 
+  gps_node::gps_raw gps_data;
 
-  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("gps_raw", 100);
+  ros::Publisher chatter_pub = n.advertise<gps_node::gps_raw>("gps_raw", 100);
 
   ros::Rate loop_rate(1000);
 
@@ -37,17 +38,16 @@ int main(int argc, char **argv)
 
   while (ros::ok())
   {
-    std_msgs::String msg;
-    std::stringstream ss;
-
     while (serialDataAvail (fd))
     {
 				uint8_t decodedMessage = NazaDecoder.decode(serialGetchar (fd));
-				//std::cout << "GPS Sats: " << round(NazaDecoder.getNumSat()) << ", Lat: " << NazaDecoder.getLat() << ", Long: " << NazaDecoder.getLon() << ", Heading: " << round(NazaDecoder.getHeadingNc()) << ", Alt: " << NazaDecoder.getGpsAlt() << " \n";
-        gpsData = std::to_string(round(NazaDecoder.getNumSat())) + "," + std::to_string(NazaDecoder.getLat()) + "," + std::to_string(NazaDecoder.getLon()) + "," + std::to_string(round(NazaDecoder.getHeadingNc())) + "," + std::to_string(NazaDecoder.getGpsAlt()) + " \n";
-        msg.data = gpsData;
-        //ROS_INFO("%s", msg.data.c_str());
-        chatter_pub.publish(msg);
+				gps_data.gps_sats = round(NazaDecoder.getNumSat());
+        gps_data.lat = NazaDecoder.getLat();
+        gps_data.lon = NazaDecoder.getLon();
+        gps_data.heading = round(NazaDecoder.getHeadingNc());
+        gps_data.alt = NazaDecoder.getGpsAlt();
+        //std::cout << gps_data.heading << "\n";
+        chatter_pub.publish(gps_data);
     }
 
 
