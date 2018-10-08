@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/pi/airdrop_ros/install/setup.sh
