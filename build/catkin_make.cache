@@ -1,2 +1,2 @@
-
+gps_node
 -DCATKIN_DEVEL_PREFIX=/home/pi/airdrop_ros/devel -DCMAKE_INSTALL_PREFIX=/home/pi/airdrop_ros/install -G Unix Makefiles

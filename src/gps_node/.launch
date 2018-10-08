@@ -1,0 +1,3 @@
+<launch>
+  <node name="talker" pkg="gps_node" type="talker" />
+</launch>
