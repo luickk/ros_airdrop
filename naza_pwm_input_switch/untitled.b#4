@@ -3,7 +3,7 @@
 <eagle version="9.1.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -146,6 +146,7 @@ PWM</text>
 <text x="66.04" y="5.08" size="1.27" layer="21" rot="R270">GND
 5V
 PWM</text>
+<text x="82.55" y="29.21" size="1.778" layer="48" rot="R90">output</text>
 </plain>
 <libraries>
 <library name="SparkFun">

@@ -139,14 +139,14 @@ PWM</text>
 <hole x="83.82" y="2.54" drill="3.2"/>
 <hole x="2.54" y="2.54" drill="3.2"/>
 <hole x="2.54" y="48.26" drill="3.2"/>
-<text x="31.75" y="20.32" size="0.762" layer="1">10k</text>
-<text x="48.26" y="10.16" size="0.762" layer="1" distance="30">10k</text>
-<text x="33.02" y="10.16" size="0.762" layer="1" distance="30">7k</text>
-<text x="48.26" y="20.32" size="0.762" layer="1" distance="30">7k</text>
 <text x="66.04" y="5.08" size="1.27" layer="21" rot="R270">GND
 5V
 PWM</text>
 <text x="82.55" y="29.21" size="1.778" layer="48" rot="R90">output</text>
+<text x="46.99" y="10.16" size="1.016" layer="48">10k</text>
+<text x="34.29" y="21.59" size="1.016" layer="48" rot="R180">10k</text>
+<text x="48.26" y="20.32" size="1.016" layer="48">7k</text>
+<text x="31.75" y="10.16" size="1.016" layer="48">7k</text>
 </plain>
 <libraries>
 <library name="SparkFun">

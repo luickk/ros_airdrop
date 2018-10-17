@@ -126,7 +126,7 @@
 <text x="34.29" y="31.75" size="1.27" layer="21">GND
 5V
 PWM</text>
-<text x="64.77" y="5.08" size="1.27" layer="21">GND
+<text x="57.15" y="5.08" size="1.27" layer="21">GND
 5V
 PWM</text>
 <text x="77.47" y="20.32" size="1.27" layer="21" rot="R90">GND
@@ -143,6 +143,9 @@ PWM</text>
 <text x="48.26" y="10.16" size="0.762" layer="1" distance="30">10k</text>
 <text x="33.02" y="10.16" size="0.762" layer="1" distance="30">7k</text>
 <text x="48.26" y="20.32" size="0.762" layer="1" distance="30">7k</text>
+<text x="66.04" y="5.08" size="1.27" layer="21" rot="R270">GND
+5V
+PWM</text>
 </plain>
 <libraries>
 <library name="SparkFun">
@@ -1746,7 +1749,7 @@ design rules under a new name.</description>
 </element>
 <element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="PC56H19_V0" package3d_urn="urn:adsk.eagle:package:15891/1" value="PC56H19_V0" x="48.26" y="5.08" rot="R90"/>
 <element name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" package="PC56H19_V0" package3d_urn="urn:adsk.eagle:package:15891/1" value="PC56H19_V0" x="33.02" y="5.08" rot="R90"/>
-<element name="JP11" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X03" package3d_urn="urn:adsk.eagle:package:22458/2" value="" x="5.08" y="-3.81"/>
+<element name="JP11" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X03" package3d_urn="urn:adsk.eagle:package:22458/2" value="" x="68.58" y="7.62" rot="R180"/>
 </elements>
 <signals>
 <signal name="N$1">
@@ -2165,7 +2168,7 @@ design rules under a new name.</description>
 <wire x1="54.7116" y1="34.29" x2="55.9308" y2="35.5092" width="0.1524" layer="16"/>
 <wire x1="54.7116" y1="34.29" x2="54.61" y2="34.29" width="0.1524" layer="16"/>
 <contactref element="JP11" pad="2"/>
-<wire x1="5.08" y1="-3.81" x2="6.35" y2="8.89" width="0" layer="19" extent="1-1"/>
+<wire x1="68.58" y1="7.62" x2="6.35" y2="8.89" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$11">
 <contactref element="T11" pad="3"/>
@@ -2364,12 +2367,12 @@ design rules under a new name.</description>
 <wire x1="38.1" y1="12.8016" x2="38.1" y2="12.7" width="0.1524" layer="16"/>
 <wire x1="53.34" y1="17.6784" x2="53.34" y2="17.78" width="0.1524" layer="16"/>
 <contactref element="JP11" pad="3"/>
-<wire x1="7.62" y1="-3.81" x2="6.4008" y2="11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="66.04" y1="7.62" x2="6.4008" y2="11.43" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$14">
 <contactref element="U$1" pad="D4"/>
 <contactref element="JP11" pad="1"/>
-<wire x1="2.54" y1="-3.81" x2="21.59" y2="24.13" width="0" layer="19" extent="1-1"/>
+<wire x1="71.12" y1="7.62" x2="21.59" y2="24.13" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

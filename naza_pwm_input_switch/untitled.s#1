@@ -5415,20 +5415,13 @@ www.lextar.com</description>
 <pinref part="T2" gate="G$1" pin="B"/>
 <junction x="33.02" y="68.58"/>
 <wire x1="33.02" y1="68.58" x2="15.24" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="68.58" x2="-5.08" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="68.58" x2="-22.86" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-5.08" y1="68.58" x2="-22.86" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="48.26" x2="-20.32" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="68.58" x2="-22.86" y2="48.26" width="0.1524" layer="91"/>
 <junction x="-22.86" y="48.26"/>
 <junction x="-20.32" y="48.26"/>
-<wire x1="-5.08" y1="68.58" x2="-5.08" y2="12.7" width="0.1524" layer="91"/>
-<junction x="-5.08" y="68.58"/>
-<wire x1="-5.08" y1="12.7" x2="-50.8" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
-<wire x1="-50.8" y1="12.7" x2="-50.8" y2="7.62" width="0.1524" layer="91"/>
-<junction x="-50.8" y="7.62"/>
 </segment>
 </net>
 <net name="N$36" class="0">
@@ -5547,11 +5540,17 @@ www.lextar.com</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="D2"/>
 <wire x1="-45.72" y1="58.42" x2="-35.56" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-35.56" y1="58.42" x2="-35.56" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="58.42" x2="-35.56" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="-35.56" y1="53.34" x2="-35.56" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="48.26" x2="-33.02" y2="48.26" width="0.1524" layer="91"/>
 <junction x="-45.72" y="58.42"/>
 <junction x="-33.02" y="48.26"/>
+<pinref part="LED2" gate="G$1" pin="A"/>
+<wire x1="-50.8" y1="7.62" x2="-40.64" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="7.62" x2="-40.64" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="53.34" x2="-35.56" y2="53.34" width="0.1524" layer="91"/>
+<junction x="-35.56" y="53.34"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -5563,6 +5562,10 @@ www.lextar.com</description>
 <wire x1="-38.1" y1="40.64" x2="-33.02" y2="40.64" width="0.1524" layer="91"/>
 <junction x="-45.72" y="60.96"/>
 <junction x="-33.02" y="40.64"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
+<wire x1="-33.02" y1="7.62" x2="-38.1" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="7.62" x2="-38.1" y2="40.64" width="0.1524" layer="91"/>
+<junction x="-38.1" y="40.64"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -5589,17 +5592,10 @@ www.lextar.com</description>
 <pinref part="T11" gate="G$1" pin="B"/>
 <junction x="218.44" y="68.58"/>
 <junction x="236.22" y="68.58"/>
-<wire x1="109.22" y1="63.5" x2="-7.62" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="63.5" x2="-20.32" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="63.5" x2="-20.32" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="40.64" x2="-20.32" y2="63.5" width="0.1524" layer="91"/>
 <junction x="-20.32" y="40.64"/>
 <junction x="-22.86" y="40.64"/>
-<wire x1="-7.62" y1="63.5" x2="-7.62" y2="10.16" width="0.1524" layer="91"/>
-<junction x="-7.62" y="63.5"/>
-<wire x1="-7.62" y1="10.16" x2="-33.02" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="-33.02" y1="10.16" x2="-33.02" y2="7.62" width="0.1524" layer="91"/>
-<junction x="-33.02" y="7.62"/>
 </segment>
 </net>
 <net name="N$13" class="0">

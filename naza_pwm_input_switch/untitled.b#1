@@ -146,6 +146,8 @@ PWM</text>
 <text x="31.75" y="10.16" size="1.016" layer="48">7k</text>
 <text x="80.01" y="15.24" size="1.27" layer="48">GND
 5V</text>
+<text x="81.28" y="10.16" size="1.016" layer="48" rot="R90">Power</text>
+<text x="76.2" y="7.62" size="1.016" layer="48" rot="R180">Input</text>
 </plain>
 <libraries>
 <library name="SparkFun">
