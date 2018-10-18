@@ -1,3 +1,4 @@
 <launch>
+  <node name="cc" pkg="cc_node" type="cc" />
   <node name="talker" pkg="gps_node" type="talker" />
 </launch>
