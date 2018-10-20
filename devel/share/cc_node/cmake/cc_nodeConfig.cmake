@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(cc_node_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/pi/airdrop_ros/devel/include " STREQUAL " ")
   set(cc_node_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/pi/airdrop_ros/devel/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pi/airdrop_ros/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /home/pi/airdrop_ros/devel/lib;/home/pi/airdrop_ros/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(cc_node_EXPORTED_TARGETS "")
+set(cc_node_EXPORTED_TARGETS "cc_node_generate_messages_cpp;cc_node_generate_messages_lisp;cc_node_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${cc_node_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -182,7 +182,7 @@ foreach(depend ${depends})
   list(APPEND cc_node_EXPORTED_TARGETS ${${cc_node_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "cc_node-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${cc_node_DIR}/${extra})

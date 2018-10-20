@@ -1,0 +1,7 @@
+float32 pos_lat
+float32 pos_lon
+int32 pos_heading
+int32 pos_alt
+
+---
+int64 a_operation_status

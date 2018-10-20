@@ -1,0 +1,4 @@
+string m_action_type
+int64 m_action_val
+---
+int64 m_action_status
