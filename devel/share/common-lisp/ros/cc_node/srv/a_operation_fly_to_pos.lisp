@@ -17,11 +17,6 @@
     :initarg :pos_lon
     :type cl:float
     :initform 0.0)
-   (pos_heading
-    :reader pos_heading
-    :initarg :pos_heading
-    :type cl:integer
-    :initform 0)
    (pos_alt
     :reader pos_alt
     :initarg :pos_alt
@@ -47,11 +42,6 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader cc_node-srv:pos_lon-val is deprecated.  Use cc_node-srv:pos_lon instead.")
   (pos_lon m))
 
-(cl:ensure-generic-function 'pos_heading-val :lambda-list '(m))
-(cl:defmethod pos_heading-val ((m <a_operation_fly_to_pos-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader cc_node-srv:pos_heading-val is deprecated.  Use cc_node-srv:pos_heading instead.")
-  (pos_heading m))
-
 (cl:ensure-generic-function 'pos_alt-val :lambda-list '(m))
 (cl:defmethod pos_alt-val ((m <a_operation_fly_to_pos-request>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader cc_node-srv:pos_alt-val is deprecated.  Use cc_node-srv:pos_alt instead.")
@@ -68,12 +58,6 @@
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
-  (cl:let* ((signed (cl:slot-value msg 'pos_heading)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
-    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
-    )
   (cl:let* ((signed (cl:slot-value msg 'pos_alt)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
@@ -100,12 +84,6 @@
       (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'pos_heading) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
-    (cl:let ((unsigned 0))
-      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'pos_alt) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
   msg
 )
@@ -117,19 +95,18 @@
   "cc_node/a_operation_fly_to_posRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<a_operation_fly_to_pos-request>)))
   "Returns md5sum for a message object of type '<a_operation_fly_to_pos-request>"
-  "6d61bc21b7b509c51683fcc6fb95d397")
+  "f535eee77eb701869745e49cc8201a71")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'a_operation_fly_to_pos-request)))
   "Returns md5sum for a message object of type 'a_operation_fly_to_pos-request"
-  "6d61bc21b7b509c51683fcc6fb95d397")
+  "f535eee77eb701869745e49cc8201a71")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<a_operation_fly_to_pos-request>)))
   "Returns full string definition for message of type '<a_operation_fly_to_pos-request>"
-  (cl:format cl:nil "float32 pos_lat~%float32 pos_lon~%int32 pos_heading~%int32 pos_alt~%~%~%~%"))
+  (cl:format cl:nil "float32 pos_lat~%float32 pos_lon~%int32 pos_alt~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'a_operation_fly_to_pos-request)))
   "Returns full string definition for message of type 'a_operation_fly_to_pos-request"
-  (cl:format cl:nil "float32 pos_lat~%float32 pos_lon~%int32 pos_heading~%int32 pos_alt~%~%~%~%"))
+  (cl:format cl:nil "float32 pos_lat~%float32 pos_lon~%int32 pos_alt~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <a_operation_fly_to_pos-request>))
   (cl:+ 0
-     4
      4
      4
      4
@@ -139,7 +116,6 @@
   (cl:list 'a_operation_fly_to_pos-request
     (cl:cons ':pos_lat (pos_lat msg))
     (cl:cons ':pos_lon (pos_lon msg))
-    (cl:cons ':pos_heading (pos_heading msg))
     (cl:cons ':pos_alt (pos_alt msg))
 ))
 ;//! \htmlinclude a_operation_fly_to_pos-response.msg.html
@@ -199,10 +175,10 @@
   "cc_node/a_operation_fly_to_posResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<a_operation_fly_to_pos-response>)))
   "Returns md5sum for a message object of type '<a_operation_fly_to_pos-response>"
-  "6d61bc21b7b509c51683fcc6fb95d397")
+  "f535eee77eb701869745e49cc8201a71")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'a_operation_fly_to_pos-response)))
   "Returns md5sum for a message object of type 'a_operation_fly_to_pos-response"
-  "6d61bc21b7b509c51683fcc6fb95d397")
+  "f535eee77eb701869745e49cc8201a71")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<a_operation_fly_to_pos-response>)))
   "Returns full string definition for message of type '<a_operation_fly_to_pos-response>"
   (cl:format cl:nil "int64 a_operation_status~%~%~%~%"))

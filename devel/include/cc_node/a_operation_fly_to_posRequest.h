@@ -26,13 +26,11 @@ struct a_operation_fly_to_posRequest_
   a_operation_fly_to_posRequest_()
     : pos_lat(0.0)
     , pos_lon(0.0)
-    , pos_heading(0)
     , pos_alt(0)  {
     }
   a_operation_fly_to_posRequest_(const ContainerAllocator& _alloc)
     : pos_lat(0.0)
     , pos_lon(0.0)
-    , pos_heading(0)
     , pos_alt(0)  {
   (void)_alloc;
     }
@@ -45,11 +43,9 @@ struct a_operation_fly_to_posRequest_
    typedef float _pos_lon_type;
   _pos_lon_type pos_lon;
 
-   typedef int32_t _pos_heading_type;
-  _pos_heading_type pos_heading;
-
    typedef int32_t _pos_alt_type;
   _pos_alt_type pos_alt;
+
 
 
 
@@ -85,7 +81,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'std_msgs': ['/opt/ros/indigo/share/std_msgs/cmake/../msg']}
+// {'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -128,12 +124,12 @@ struct MD5Sum< ::cc_node::a_operation_fly_to_posRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "1334cf54d53e7abe335a75dbac72c1e2";
+    return "a77ffc40f4385f5dc620837897fc6939";
   }
 
   static const char* value(const ::cc_node::a_operation_fly_to_posRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x1334cf54d53e7abeULL;
-  static const uint64_t static_value2 = 0x335a75dbac72c1e2ULL;
+  static const uint64_t static_value1 = 0xa77ffc40f4385f5dULL;
+  static const uint64_t static_value2 = 0xc620837897fc6939ULL;
 };
 
 template<class ContainerAllocator>
@@ -154,7 +150,6 @@ struct Definition< ::cc_node::a_operation_fly_to_posRequest_<ContainerAllocator>
   {
     return "float32 pos_lat\n\
 float32 pos_lon\n\
-int32 pos_heading\n\
 int32 pos_alt\n\
 \n\
 ";
@@ -177,7 +172,6 @@ namespace serialization
     {
       stream.next(m.pos_lat);
       stream.next(m.pos_lon);
-      stream.next(m.pos_heading);
       stream.next(m.pos_alt);
     }
 
@@ -201,8 +195,6 @@ struct Printer< ::cc_node::a_operation_fly_to_posRequest_<ContainerAllocator> >
     Printer<float>::stream(s, indent + "  ", v.pos_lat);
     s << indent << "pos_lon: ";
     Printer<float>::stream(s, indent + "  ", v.pos_lon);
-    s << indent << "pos_heading: ";
-    Printer<int32_t>::stream(s, indent + "  ", v.pos_heading);
     s << indent << "pos_alt: ";
     Printer<int32_t>::stream(s, indent + "  ", v.pos_alt);
   }

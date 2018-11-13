@@ -3,8 +3,6 @@
           POS_LAT
           POS_LON-VAL
           POS_LON
-          POS_HEADING-VAL
-          POS_HEADING
           POS_ALT-VAL
           POS_ALT
           A_OPERATION_STATUS-VAL
