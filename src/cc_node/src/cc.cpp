@@ -32,7 +32,7 @@ OPERATION_SUCCESSFUL = 1
 OPERATION_PREVENTED_BY_ONGOING_OP = 2
 OPERATION_BLOCKED = 3
 AIRBORNE = 4
-NOT_AIRBORNE =5
+NOT_AIRBORNE = 5
 FAILED = 6
 */
 
@@ -41,6 +41,14 @@ ConfigFile cf("/etc/naza/pwm_config.txt");
 
 naza_interface_manual_c naza_m;
 naza_interface_auto_c naza_a;
+
+
+/*
+  ROS DRONE STATES
+*/
+
+bool airborne=false;
+bool in_mission=false;
 
 /*
   Manual actions service
@@ -80,9 +88,15 @@ bool manual_action(cc_node::manual_action::Request  &req,
 bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
                   cc_node::a_operation_fly_to_pos::Response &res)
 {
-  if(req.pos_lat != 0 && req.pos_lon != 0 && req.pos_alt != 0) {
+  if(req.pos_lat != 0 && req.pos_lon != 0 && req.pos_alt != 0 && airborne && !in_mission) {
+    in_mission = true;
     naza_a.fly_to_gps_pos(cf, pca9685, naza_m, req.pos_lat, req.pos_lon, req.pos_alt);
+    in_mission = false;
     res.a_operation_status = 1;
+  } else if (airborne){
+    res.a_operation_status = 4;
+  } else if (!in_mission){
+    res.a_operation_status = 2;
   }
   ROS_INFO("fly to pos(lat,lon): %ld, %ld", req.pos_lat, req.pos_lon);
   return true;
@@ -91,9 +105,16 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
 bool a_operation_landing(cc_node::a_operation_landing::Request  &req,
                   cc_node::a_operation_landing::Response &res)
 {
-  if(req.a_operation_landing_reason != "") {
+  if(req.a_operation_landing_reason != "" && airborne && !in_mission) {
+    in_mission = true;
     naza_a.auto_landing(cf, pca9685, naza_m);
+    in_mission = false;
+    airborne = false;
     res.a_operation_status = 1;
+  } else if (airborne){
+    res.a_operation_status = 4;
+  } else if (!in_mission){
+    res.a_operation_status = 2;
   }
   ROS_INFO("reason for landing: %ld", req.a_operation_landing_reason);
   return true;
@@ -102,9 +123,16 @@ bool a_operation_landing(cc_node::a_operation_landing::Request  &req,
 bool a_operation_liftoff(cc_node::a_operation_liftoff::Request  &req,
                   cc_node::a_operation_liftoff::Response &res)
 {
-  if(req.a_operation_takeoff_height != 0) {
+  if(req.a_operation_takeoff_height >= 10 && !airborne  && !in_mission) {
+    in_mission = true;
     naza_a.auto_liftoff(cf, pca9685, naza_m, req.a_operation_takeoff_height);
+    in_mission = false;
+    airborne = true;
     res.a_operation_status = 1;
+  } else if (!airborne){
+    res.a_operation_status = 5;
+  } else if (in_mission){
+    res.a_operation_status = 2;
   }
   ROS_INFO("taking off to height: %ld", req.a_operation_takeoff_height);
   return true;
@@ -113,9 +141,13 @@ bool a_operation_liftoff(cc_node::a_operation_liftoff::Request  &req,
 bool a_operation_stop_action_and_hover(cc_node::a_operation_stop_action_and_hover::Request  &req,
                   cc_node::a_operation_stop_action_and_hover::Response &res)
 {
-  if(req.a_operation_pausing_reason != "") {
+  if(req.a_operation_pausing_reason != ""  && airborne) {
+    in_mission = true;
     naza_a.auto_hover(cf, pca9685, naza_m);
+    in_mission = false;
     res.a_operation_status = 1;
+  } else if (airborne){
+    res.a_operation_status = 5;
   }
   ROS_INFO("reason for pausing: %ld", req.a_operation_pausing_reason);
   return true;
@@ -124,9 +156,13 @@ bool a_operation_stop_action_and_hover(cc_node::a_operation_stop_action_and_hove
 bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Request  &req,
                   cc_node::a_operation_turn_to_direction::Response &res)
 {
-  if(req.a_operation_dir_in_deg != 0) {
+  if(req.a_operation_dir_in_deg != 0  && airborne) {
+    in_mission = true;
     naza_a.turn_to_deg(cf, pca9685, naza_m, req.a_operation_dir_in_deg);
+    in_mission = false;
     res.a_operation_status = 1;
+  } else if (airborne){
+    res.a_operation_status = 5;
   }
   ROS_INFO("turning to dir: %ld", req.a_operation_dir_in_deg);
   return true;
@@ -140,7 +176,6 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "Command and Control Node");
   ros::NodeHandle n;
   pca9685.SetFrequency(50);
-
 
   ros::ServiceServer service = n.advertiseService("manual_action", manual_action);
 
