@@ -292,6 +292,12 @@ message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
 
+//Value Computed by CMake
+rc_node_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/rc_node
+
+//Value Computed by CMake
+rc_node_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/rc_node
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
 
@@ -421,7 +427,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

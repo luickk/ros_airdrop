@@ -70,3 +70,11 @@
 /home/pi/airdrop_ros/build/gps_node/CMakeFiles/gps_node_gennodejs.dir
 /home/pi/airdrop_ros/build/gps_node/CMakeFiles/rebuild_cache.dir
 /home/pi/airdrop_ros/build/gps_node/CMakeFiles/gps_node_generate_messages_lisp.dir
+/home/pi/airdrop_ros/build/rc_node/CMakeFiles/install/local.dir
+/home/pi/airdrop_ros/build/rc_node/CMakeFiles/install.dir
+/home/pi/airdrop_ros/build/rc_node/CMakeFiles/list_install_components.dir
+/home/pi/airdrop_ros/build/rc_node/CMakeFiles/install/strip.dir
+/home/pi/airdrop_ros/build/rc_node/CMakeFiles/edit_cache.dir
+/home/pi/airdrop_ros/build/rc_node/CMakeFiles/rc.dir
+/home/pi/airdrop_ros/build/rc_node/CMakeFiles/rebuild_cache.dir
+/home/pi/airdrop_ros/build/rc_node/CMakeFiles/test.dir

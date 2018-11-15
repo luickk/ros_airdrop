@@ -23,6 +23,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "gps_node/catkin_generated/ordered_paths.cmake"
   "gps_node/catkin_generated/package.cmake"
   "gps_node/cmake/gps_node-genmsg.cmake"
+  "rc_node/catkin_generated/ordered_paths.cmake"
+  "rc_node/catkin_generated/package.cmake"
   "/home/pi/airdrop_ros/devel/share/cc_node/cmake/cc_node-msg-paths.cmake"
   "/home/pi/airdrop_ros/devel/share/gps_node/cmake/gps_node-msg-paths.cmake"
   "/home/pi/airdrop_ros/src/CMakeLists.txt"
@@ -30,6 +32,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/pi/airdrop_ros/src/cc_node/package.xml"
   "/home/pi/airdrop_ros/src/gps_node/CMakeLists.txt"
   "/home/pi/airdrop_ros/src/gps_node/package.xml"
+  "/home/pi/airdrop_ros/src/rc_node/CMakeLists.txt"
+  "/home/pi/airdrop_ros/src/rc_node/package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/../package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/all.cmake"
   "/opt/ros/kinetic/share/catkin/cmake/assert.cmake"
@@ -189,6 +193,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "cc_node/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gps_node/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "rc_node/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -244,4 +249,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "gps_node/CMakeFiles/gps_node_generate_messages_cpp.dir/DependInfo.cmake"
   "gps_node/CMakeFiles/gps_node_gennodejs.dir/DependInfo.cmake"
   "gps_node/CMakeFiles/gps_node_generate_messages_lisp.dir/DependInfo.cmake"
+  "rc_node/CMakeFiles/rc.dir/DependInfo.cmake"
   )

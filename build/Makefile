@@ -828,6 +828,19 @@ gps_node_generate_messages_lisp/fast:
 	$(MAKE) -f gps_node/CMakeFiles/gps_node_generate_messages_lisp.dir/build.make gps_node/CMakeFiles/gps_node_generate_messages_lisp.dir/build
 .PHONY : gps_node_generate_messages_lisp/fast
 
+#=============================================================================
+# Target rules for targets named rc
+
+# Build rule for target.
+rc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rc
+.PHONY : rc
+
+# fast build rule for target.
+rc/fast:
+	$(MAKE) -f rc_node/CMakeFiles/rc.dir/build.make rc_node/CMakeFiles/rc.dir/build
+.PHONY : rc/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -892,6 +905,7 @@ help:
 	@echo "... gps_node_generate_messages_cpp"
 	@echo "... gps_node_gennodejs"
 	@echo "... gps_node_generate_messages_lisp"
+	@echo "... rc"
 .PHONY : help
 
 
