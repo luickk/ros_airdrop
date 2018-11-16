@@ -4,28 +4,27 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 
+#include "mission_node/start_mission.h"
+
 using namespace std;
 
 int main(int argc, char **argv)
 {
-  string cmd;
-  string main_CMD = "main";
-  while(1){
-    if(main_CMD=="main") {
-      cout << "Enter a command:  " << endl;
-      cout << "start mission <mission>" << endl;
-      cout << "actionmode" << endl;
-      getline (cin, cmd);
-      if(cmd=="actionmode"){
-        main_CMD = "actionmode";
-      }
-    } else if(main_CMD=="actionmode"){
-      cout << "Enter an action:  " << endl;
-      cout << "or by typing exit" << endl;
-      getline (cin, cmd);
-      if(cmd=="exit"){
-        main_CMD = "actionmode";
-      }
-    }
+  ros::init(argc, argv, "Remote control node");
+
+  ros::NodeHandle n;
+  ros::ServiceClient client = n.serviceClient<mission_node::start_mission>("start_mission");
+  mission_node::start_mission srv;
+  srv.request.mission_name = "m1";
+  if (client.call(srv))
+  {
+    ROS_INFO("Response Code: %ld", srv.response.mission_status);
   }
+  else
+  {
+    ROS_ERROR("Failed to call service");
+    return 1;
+  }
+
+  return 0;
 }

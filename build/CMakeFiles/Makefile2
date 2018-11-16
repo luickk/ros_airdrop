@@ -338,13 +338,13 @@ clean: cc_node/CMakeFiles/cc_node_gennodejs.dir/clean
 # Target rules for target cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir
 
 # All Build rule for target.
+cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/depend
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=22,23,24,25,26,27 "Built target cc_node_generate_messages_nodejs"
@@ -472,13 +472,13 @@ clean: cc_node/CMakeFiles/cc_node_gencpp.dir/clean
 # Target rules for target cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir
 
 # All Build rule for target.
+cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/depend
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target cc_node_generate_messages_cpp"
@@ -643,13 +643,13 @@ clean: cc_node/CMakeFiles/cc.dir/clean
 # Target rules for target cc_node/CMakeFiles/cc_node_generate_messages_py.dir
 
 # All Build rule for target.
-cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_py.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_py.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_py.dir/depend
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_py.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=28,29,30,31,32,33,34 "Built target cc_node_generate_messages_py"
@@ -1033,10 +1033,10 @@ clean: cc_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 # Target rules for target cc_node/CMakeFiles/cc_node_generate_messages.dir
 
 # All Build rule for target.
-cc_node/CMakeFiles/cc_node_generate_messages.dir/all: cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages.dir/all: cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages.dir/all: cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages.dir/all: cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages.dir/all: cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages.dir/all: cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages.dir/all: cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages.dir/depend
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages.dir/build
@@ -1106,13 +1106,13 @@ clean: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_land
 # Target rules for target cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir
 
 # All Build rule for target.
+cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/depend
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=16,17,18,19,20,21 "Built target cc_node_generate_messages_lisp"
@@ -1176,13 +1176,13 @@ clean: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn
 # Target rules for target cc_node/CMakeFiles/cc_node_generate_messages_eus.dir
 
 # All Build rule for target.
+cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
-cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/depend
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=9,10,11,12,13,14,15 "Built target cc_node_generate_messages_eus"
@@ -1644,7 +1644,7 @@ clean: gps_node/CMakeFiles/gps_node_generate_messages_eus.dir/clean
 gps_node/CMakeFiles/talker.dir/all:
 	$(MAKE) -f gps_node/CMakeFiles/talker.dir/build.make gps_node/CMakeFiles/talker.dir/depend
 	$(MAKE) -f gps_node/CMakeFiles/talker.dir/build.make gps_node/CMakeFiles/talker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=44,45 "Built target talker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=53,54 "Built target talker"
 .PHONY : gps_node/CMakeFiles/talker.dir/all
 
 # Include target in all.
@@ -1837,6 +1837,472 @@ clean: gps_node/CMakeFiles/gps_node_generate_messages_lisp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory mission_node
+
+# Convenience name for "all" pass in the directory.
+mission_node/all: mission_node/CMakeFiles/mn.dir/all
+mission_node/all: mission_node/CMakeFiles/mission_node_generate_messages.dir/all
+
+.PHONY : mission_node/all
+
+# Convenience name for "clean" pass in the directory.
+mission_node/clean: mission_node/CMakeFiles/mn.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_genpy.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_generate_messages_py.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_gencpp.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_generate_messages.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_genlisp.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_geneus.dir/clean
+mission_node/clean: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/clean
+mission_node/clean: mission_node/CMakeFiles/mission_node_gennodejs.dir/clean
+
+.PHONY : mission_node/clean
+
+# Convenience name for "preinstall" pass in the directory.
+mission_node/preinstall:
+
+.PHONY : mission_node/preinstall
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mn.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mn.dir/all:
+	$(MAKE) -f mission_node/CMakeFiles/mn.dir/build.make mission_node/CMakeFiles/mn.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mn.dir/build.make mission_node/CMakeFiles/mn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=49,50 "Built target mn"
+.PHONY : mission_node/CMakeFiles/mn.dir/all
+
+# Include target in all.
+all: mission_node/CMakeFiles/mn.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mn.dir/rule
+
+# Convenience name for target.
+mn: mission_node/CMakeFiles/mn.dir/rule
+
+.PHONY : mn
+
+# clean rule for target.
+mission_node/CMakeFiles/mn.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mn.dir/build.make mission_node/CMakeFiles/mn.dir/clean
+.PHONY : mission_node/CMakeFiles/mn.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mn.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_genpy.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_genpy.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_genpy.dir/build.make mission_node/CMakeFiles/mission_node_genpy.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_genpy.dir/build.make mission_node/CMakeFiles/mission_node_genpy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target mission_node_genpy"
+.PHONY : mission_node/CMakeFiles/mission_node_genpy.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_genpy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_genpy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_genpy.dir/rule
+
+# Convenience name for target.
+mission_node_genpy: mission_node/CMakeFiles/mission_node_genpy.dir/rule
+
+.PHONY : mission_node_genpy
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_genpy.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_genpy.dir/build.make mission_node/CMakeFiles/mission_node_genpy.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_genpy.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_genpy.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_generate_messages_py.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_py.dir/all
+mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_py.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_py.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_py.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=47,48 "Built target mission_node_generate_messages_py"
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_py.dir/rule
+
+# Convenience name for target.
+mission_node_generate_messages_py: mission_node/CMakeFiles/mission_node_generate_messages_py.dir/rule
+
+.PHONY : mission_node_generate_messages_py
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages_py.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_py.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_py.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_gencpp.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_gencpp.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_gencpp.dir/build.make mission_node/CMakeFiles/mission_node_gencpp.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_gencpp.dir/build.make mission_node/CMakeFiles/mission_node_gencpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target mission_node_gencpp"
+.PHONY : mission_node/CMakeFiles/mission_node_gencpp.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_gencpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_gencpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_gencpp.dir/rule
+
+# Convenience name for target.
+mission_node_gencpp: mission_node/CMakeFiles/mission_node_gencpp.dir/rule
+
+.PHONY : mission_node_gencpp
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_gencpp.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_gencpp.dir/build.make mission_node/CMakeFiles/mission_node_gencpp.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_gencpp.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_gencpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=42 "Built target mission_node_generate_messages_cpp"
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+mission_node_generate_messages_cpp: mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/rule
+
+.PHONY : mission_node_generate_messages_cpp
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_generate_messages_eus.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=43,44 "Built target mission_node_generate_messages_eus"
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+mission_node_generate_messages_eus: mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/rule
+
+.PHONY : mission_node_generate_messages_eus
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/all: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=45 "Built target mission_node_generate_messages_lisp"
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+mission_node_generate_messages_lisp: mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/rule
+
+.PHONY : mission_node_generate_messages_lisp
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_generate_messages.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all
+mission_node/CMakeFiles/mission_node_generate_messages.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all
+mission_node/CMakeFiles/mission_node_generate_messages.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all
+mission_node/CMakeFiles/mission_node_generate_messages.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/all
+mission_node/CMakeFiles/mission_node_generate_messages.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target mission_node_generate_messages"
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages.dir/all
+
+# Include target in all.
+all: mission_node/CMakeFiles/mission_node_generate_messages.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_generate_messages.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_generate_messages.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages.dir/rule
+
+# Convenience name for target.
+mission_node_generate_messages: mission_node/CMakeFiles/mission_node_generate_messages.dir/rule
+
+.PHONY : mission_node_generate_messages
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_generate_messages.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_genlisp.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_genlisp.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_genlisp.dir/build.make mission_node/CMakeFiles/mission_node_genlisp.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_genlisp.dir/build.make mission_node/CMakeFiles/mission_node_genlisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target mission_node_genlisp"
+.PHONY : mission_node/CMakeFiles/mission_node_genlisp.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_genlisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_genlisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_genlisp.dir/rule
+
+# Convenience name for target.
+mission_node_genlisp: mission_node/CMakeFiles/mission_node_genlisp.dir/rule
+
+.PHONY : mission_node_genlisp
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_genlisp.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_genlisp.dir/build.make mission_node/CMakeFiles/mission_node_genlisp.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_genlisp.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_genlisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_geneus.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_geneus.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_geneus.dir/build.make mission_node/CMakeFiles/mission_node_geneus.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_geneus.dir/build.make mission_node/CMakeFiles/mission_node_geneus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target mission_node_geneus"
+.PHONY : mission_node/CMakeFiles/mission_node_geneus.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_geneus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_geneus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_geneus.dir/rule
+
+# Convenience name for target.
+mission_node_geneus: mission_node/CMakeFiles/mission_node_geneus.dir/rule
+
+.PHONY : mission_node_geneus
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_geneus.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_geneus.dir/build.make mission_node/CMakeFiles/mission_node_geneus.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_geneus.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_geneus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all:
+	$(MAKE) -f mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/build.make mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/build.make mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target _mission_node_generate_messages_check_deps_start_mission"
+.PHONY : mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/rule
+
+# Convenience name for target.
+_mission_node_generate_messages_check_deps_start_mission: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/rule
+
+.PHONY : _mission_node_generate_messages_check_deps_start_mission
+
+# clean rule for target.
+mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/build.make mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/clean
+.PHONY : mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=46 "Built target mission_node_generate_messages_nodejs"
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+mission_node_generate_messages_nodejs: mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/rule
+
+.PHONY : mission_node_generate_messages_nodejs
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target mission_node/CMakeFiles/mission_node_gennodejs.dir
+
+# All Build rule for target.
+mission_node/CMakeFiles/mission_node_gennodejs.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_gennodejs.dir/build.make mission_node/CMakeFiles/mission_node_gennodejs.dir/depend
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_gennodejs.dir/build.make mission_node/CMakeFiles/mission_node_gennodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target mission_node_gennodejs"
+.PHONY : mission_node/CMakeFiles/mission_node_gennodejs.dir/all
+
+# Build rule for subdir invocation for target.
+mission_node/CMakeFiles/mission_node_gennodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_gennodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : mission_node/CMakeFiles/mission_node_gennodejs.dir/rule
+
+# Convenience name for target.
+mission_node_gennodejs: mission_node/CMakeFiles/mission_node_gennodejs.dir/rule
+
+.PHONY : mission_node_gennodejs
+
+# clean rule for target.
+mission_node/CMakeFiles/mission_node_gennodejs.dir/clean:
+	$(MAKE) -f mission_node/CMakeFiles/mission_node_gennodejs.dir/build.make mission_node/CMakeFiles/mission_node_gennodejs.dir/clean
+.PHONY : mission_node/CMakeFiles/mission_node_gennodejs.dir/clean
+
+# clean rule for target.
+clean: mission_node/CMakeFiles/mission_node_gennodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory rc_node
 
 # Convenience name for "all" pass in the directory.
@@ -1858,10 +2324,29 @@ rc_node/preinstall:
 # Target rules for target rc_node/CMakeFiles/rc.dir
 
 # All Build rule for target.
-rc_node/CMakeFiles/rc.dir/all:
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/roscpp_generate_messages_eus.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_py.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/roscpp_generate_messages_py.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+rc_node/CMakeFiles/rc.dir/all: cc_node/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+rc_node/CMakeFiles/rc.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all
+rc_node/CMakeFiles/rc.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all
+rc_node/CMakeFiles/rc.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all
+rc_node/CMakeFiles/rc.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/all
+rc_node/CMakeFiles/rc.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all
 	$(MAKE) -f rc_node/CMakeFiles/rc.dir/build.make rc_node/CMakeFiles/rc.dir/depend
 	$(MAKE) -f rc_node/CMakeFiles/rc.dir/build.make rc_node/CMakeFiles/rc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=42,43 "Built target rc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=51,52 "Built target rc"
 .PHONY : rc_node/CMakeFiles/rc.dir/all
 
 # Include target in all.
@@ -1871,7 +2356,7 @@ all: rc_node/CMakeFiles/rc.dir/all
 
 # Build rule for subdir invocation for target.
 rc_node/CMakeFiles/rc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 rc_node/CMakeFiles/rc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : rc_node/CMakeFiles/rc.dir/rule

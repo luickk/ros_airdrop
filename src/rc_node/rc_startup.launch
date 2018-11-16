@@ -1,0 +1,3 @@
+<launch>
+  <node name="rc" pkg="rc_node" type="rc" />
+</launch>

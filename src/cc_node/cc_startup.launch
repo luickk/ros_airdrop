@@ -1,4 +1,6 @@
 <launch>
-  <node name="cc" pkg="cc_node" type="cc" />
-  <node name="talker" pkg="gps_node" type="talker" />
+  <node name="cc" pkg="cc_node" type="cc" output="screen"/>
+  <node name="talker" pkg="gps_node" type="talker" output="screen"/>
+  <node name="mn" pkg="mission_node" type="mn" output="screen"/>
+  <node name="rc" pkg="rc_node" type="rc" output="screen"/>
 </launch>

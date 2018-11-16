@@ -118,6 +118,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/pi/airdrop_ros/build/cc_node/cmake_install.cmake")
   include("/home/pi/airdrop_ros/build/gps_node/cmake_install.cmake")
+  include("/home/pi/airdrop_ros/build/mission_node/cmake_install.cmake")
   include("/home/pi/airdrop_ros/build/rc_node/cmake_install.cmake")
 
 endif()

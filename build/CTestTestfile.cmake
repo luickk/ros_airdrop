@@ -6,4 +6,5 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("cc_node")
 subdirs("gps_node")
+subdirs("mission_node")
 subdirs("rc_node")

@@ -6,6 +6,7 @@ c297633e34b14e11b7290e2072dd0f67 /home/pi/airdrop_ros/devel/include/cc_node/a_op
 6e56cd64b0861feccb0ad166c5b55094 /home/pi/airdrop_ros/devel/include/cc_node/a_operation_turn_to_direction.h
 9883ebdf6a156d193a7caaf838ac7ad7 /home/pi/airdrop_ros/devel/include/cc_node/manual_action.h
 d283a16df0a344e33ac0f71d612e9ad4 /home/pi/airdrop_ros/devel/include/gps_node/gps_raw.h
+e5a82151c7ee6a5b128cfcc61a8f5597 /home/pi/airdrop_ros/devel/include/mission_node/start_mission.h
 91a287cea10a22661cfa5c7a5835f964 /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/cc_node/srv/__init__.py
 df312c67bbf0df6dfbb34e05d0d92711 /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/cc_node/srv/_a_operation_fly_to_pos.py
 c0b9af32d76e8d90f22b9077a4b07c9b /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/cc_node/srv/_a_operation_landing.py
@@ -15,6 +16,8 @@ c0b9af32d76e8d90f22b9077a4b07c9b /home/pi/airdrop_ros/devel/lib/python2.7/dist-p
 c8f3f606985404795088421c9a22cee8 /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/cc_node/srv/_manual_action.py
 af920ff678f9fa31be5b3e602cf95c49 /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/gps_node/msg/__init__.py
 1da0818533b325d49317a7fae119ba86 /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/gps_node/msg/_gps_raw.py
+14bcde275d19d90bc582459312dcfaea /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/mission_node/srv/__init__.py
+341370be52b889e66fb9c3eb3f8bc5a6 /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/mission_node/srv/_start_mission.py
 6f2e7f6d0343282adfba1335d68177ad /home/pi/airdrop_ros/devel/share/common-lisp/ros/cc_node/srv/a_operation_fly_to_pos.lisp
 8bb3e33629ffc6301e17df4530eaf339 /home/pi/airdrop_ros/devel/share/common-lisp/ros/cc_node/srv/a_operation_landing.lisp
 8a5a3a88158bd1931097d30dd4ad733d /home/pi/airdrop_ros/devel/share/common-lisp/ros/cc_node/srv/a_operation_liftoff.lisp
@@ -22,6 +25,7 @@ af920ff678f9fa31be5b3e602cf95c49 /home/pi/airdrop_ros/devel/lib/python2.7/dist-p
 84e8b0dadfdb6e8070bde54da7a6200d /home/pi/airdrop_ros/devel/share/common-lisp/ros/cc_node/srv/a_operation_turn_to_direction.lisp
 d887d5bec4ba3a6218138bb65431e73a /home/pi/airdrop_ros/devel/share/common-lisp/ros/cc_node/srv/manual_action.lisp
 7cc570c27c71f17d7f0ab9dd438e7531 /home/pi/airdrop_ros/devel/share/common-lisp/ros/gps_node/msg/gps_raw.lisp
+2cf67fb5840cb78ef58851d376aca2dd /home/pi/airdrop_ros/devel/share/common-lisp/ros/mission_node/srv/start_mission.lisp
 91d1aa3c937f618fb11146a663463d9c /home/pi/airdrop_ros/devel/share/gennodejs/ros/cc_node/srv/a_operation_fly_to_pos.js
 443924610f7cca0c6007074716ad2f67 /home/pi/airdrop_ros/devel/share/gennodejs/ros/cc_node/srv/a_operation_landing.js
 793751caf6c60aa1abd7d3e37a7c01af /home/pi/airdrop_ros/devel/share/gennodejs/ros/cc_node/srv/a_operation_liftoff.js
@@ -29,6 +33,7 @@ d887d5bec4ba3a6218138bb65431e73a /home/pi/airdrop_ros/devel/share/common-lisp/ro
 7e25eed2967a497c00c16eebb59dce01 /home/pi/airdrop_ros/devel/share/gennodejs/ros/cc_node/srv/a_operation_turn_to_direction.js
 b5f99cec7c0ad843e4965f29dbce50f5 /home/pi/airdrop_ros/devel/share/gennodejs/ros/cc_node/srv/manual_action.js
 8d1abc3bd9baa1ff93a20859e69a3246 /home/pi/airdrop_ros/devel/share/gennodejs/ros/gps_node/msg/gps_raw.js
+f5d93c9f2195d033f59d2060dbd131b0 /home/pi/airdrop_ros/devel/share/gennodejs/ros/mission_node/srv/start_mission.js
 b8769e6a4c64918ec73b72f7e16486cd /home/pi/airdrop_ros/devel/share/roseus/ros/cc_node/manifest.l
 dad6010033d593517fff287d76c7052a /home/pi/airdrop_ros/devel/share/roseus/ros/cc_node/srv/a_operation_fly_to_pos.l
 da4e15c8c98eaf87ffed0abeff0d3ed3 /home/pi/airdrop_ros/devel/share/roseus/ros/cc_node/srv/a_operation_landing.l
@@ -38,6 +43,8 @@ d76a4ff226839e72938cade9760cd84b /home/pi/airdrop_ros/devel/share/roseus/ros/cc_
 cc96beb67a6b3478d65d78ff57f9e5cc /home/pi/airdrop_ros/devel/share/roseus/ros/cc_node/srv/manual_action.l
 f5c0c309d3b454d63041b85ca1730703 /home/pi/airdrop_ros/devel/share/roseus/ros/gps_node/manifest.l
 a04abb494a5a561e6754f130765f7d31 /home/pi/airdrop_ros/devel/share/roseus/ros/gps_node/msg/gps_raw.l
+fbb9da4079b5290147cb351b4338190d /home/pi/airdrop_ros/devel/share/roseus/ros/mission_node/manifest.l
+34c8efb27e2e53b4843f08381e7d4257 /home/pi/airdrop_ros/devel/share/roseus/ros/mission_node/srv/start_mission.l
 acfb53001b4399542c145229adf74a03 CMakeFiles/clean_test_results
 a0a395dbdeb08c450fbb075babe1177f cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos
 d77b90316712534aa5286d9867713830 cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing
@@ -56,3 +63,9 @@ b8cf3d28f5b3fa5697121db4821fc565 gps_node/CMakeFiles/gps_node_generate_messages_
 b8cf3d28f5b3fa5697121db4821fc565 gps_node/CMakeFiles/gps_node_generate_messages_lisp
 b8cf3d28f5b3fa5697121db4821fc565 gps_node/CMakeFiles/gps_node_generate_messages_nodejs
 b8cf3d28f5b3fa5697121db4821fc565 gps_node/CMakeFiles/gps_node_generate_messages_py
+a7cf8bc5688771b006ebb33a196a9a36 mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission
+9e5587c815f8de49a116ae3ffec6662b mission_node/CMakeFiles/mission_node_generate_messages_cpp
+9e5587c815f8de49a116ae3ffec6662b mission_node/CMakeFiles/mission_node_generate_messages_eus
+9e5587c815f8de49a116ae3ffec6662b mission_node/CMakeFiles/mission_node_generate_messages_lisp
+9e5587c815f8de49a116ae3ffec6662b mission_node/CMakeFiles/mission_node_generate_messages_nodejs
+9e5587c815f8de49a116ae3ffec6662b mission_node/CMakeFiles/mission_node_generate_messages_py
