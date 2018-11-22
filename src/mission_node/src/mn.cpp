@@ -1,7 +1,10 @@
 #include <sstream>
 #include <iostream>
+#include <vector>
 #include <dirent.h>
 #include <sys/types.h>
+#include <algorithm>
+#include <fstream>
 
 #include "ros/ros.h"
 #include "std_msgs/String.h"
@@ -21,7 +24,27 @@ MISSION_STARTED = 3
 MISSION_ONGOING = 4
 MISSION_DONE = 5
 
+MISSION_PARSING_ERROR = 6
+
 */
+
+vector<string> split(string str, char delimiter) {
+  vector<string> internal;
+  stringstream ss(str); // Turn the string into a stream.
+  string tok;
+
+  while(getline(ss, tok, delimiter)) {
+    internal.push_back(tok);
+  }
+
+  return internal;
+}
+
+bool is_number(const string& s)
+{
+    return !s.empty() && find_if(s.begin(),
+        s.end(), [](char c) { return !isdigit(c); }) == s.end();
+}
 
 /*
   mission loader
@@ -41,17 +64,51 @@ bool start_mission(mission_node::start_mission::Request  &req,
       ROS_INFO("Mission dir not found");
       res.mission_status = 1;
     }
-    string file = "";
+    string file_name = "";
+    string mission_name = "";
+    string file_line = "";
+    ifstream file_open;
     while ((entry = readdir(dir)) != NULL)
     {
-      file = entry->d_name;
-      if(!(file == "." || file == ".."))
+      file_name = entry->d_name;
+      if(!(file_name == "." || file_name == ".."))
       {
-        ROS_INFO("mission: %s", file.c_str());
+        mission_name = file_name.substr(0, file_name.find_last_of("."));
+        ROS_INFO("mission: %s", mission_name.c_str());
+        if(req.mission_name == mission_name){
+          file_open.exceptions ( ifstream::badbit );
+          try {
+            file_open.open (string (path) + "/" + file_name);
+            file_line = "";
+            while(getline(file_open, file_line))
+            {
+              vector<string> split_by_space = split(file_line, ' ');
+              if(split_by_space[0] == "takeoff"){
+                  ROS_INFO("%s",split_by_space[2]);
+                  if(split_by_space.size() == 2 && is_number(split_by_space[1])){
+                    res.mission_status = 5;
+                    ROS_INFO("TOOK OFF TO HEIGHT  %i", split_by_space[1]);
+                  }
+              } else if(split_by_space[0] == "land"){
+
+              } else if(split_by_space[0] == "flyto"){
+
+              } else {
+                res.mission_status = 6;
+              }
+              //ROS_INFO("Para: %s", split_by_space[i].c_str());
+
+            }
+          }
+          catch (const ifstream::failure& e) {
+            res.mission_status = 0;
+          }
+        } else {
+          res.mission_status = 0;
+        }
       }
     }
     closedir(dir);
-    res.mission_status = 5;
   }
   ROS_INFO("mission request: name=%s, status=%ld", req.mission_name.c_str(), res.mission_status);
   return true;
