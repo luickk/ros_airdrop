@@ -15,10 +15,10 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   ros::ServiceClient client = n.serviceClient<mission_node::start_mission>("start_mission");
   mission_node::start_mission srv;
-  srv.request.mission_name = "m1";
+  srv.request.mission_name = "m2";
   if (client.call(srv))
   {
-    ROS_INFO("Response Code: %ld", srv.response.mission_status);
+    ROS_INFO("Mission service requested: %s with response code: %i", srv.request.mission_name, srv.response.mission_status);
   }
   else
   {

@@ -74,7 +74,6 @@ bool start_mission(mission_node::start_mission::Request  &req,
       if(!(file_name == "." || file_name == ".."))
       {
         mission_name = file_name.substr(0, file_name.find_last_of("."));
-        ROS_INFO("mission: %s", mission_name.c_str());
         if(req.mission_name == mission_name){
           file_open.exceptions ( ifstream::badbit );
           try {
@@ -84,21 +83,44 @@ bool start_mission(mission_node::start_mission::Request  &req,
             {
               vector<string> split_by_space = split(file_line, ' ');
               if(split_by_space[0] == "takeoff"){
-                  ROS_INFO("%s",split_by_space[2]);
-                  if(split_by_space.size() == 2 && is_number(split_by_space[1])){
-                    res.mission_status = 5;
-                    ROS_INFO("TOOK OFF TO HEIGHT  %i", split_by_space[1]);
-                  }
+                if(split_by_space.size() == 2 && is_number(split_by_space[1])){
+                  ROS_INFO("TOOK OFF TO HEIGHT  %s", split_by_space[1].c_str());
+                  res.mission_status = 5;
+                } else {
+                  res.mission_status = 6;
+                  break;
+                }
               } else if(split_by_space[0] == "land"){
-
+                if(split_by_space.size() == 1){
+                  ROS_INFO("LANDING");
+                  res.mission_status = 5;
+                } else {
+                  res.mission_status = 6;
+                  break;
+                }
               } else if(split_by_space[0] == "flyto"){
-
+                if(split_by_space.size() == 4 && is_number(split_by_space[1]) && is_number(split_by_space[2]) && is_number(split_by_space[3])){
+                  ROS_INFO("FLYING TO POS  %s, %s, %s", split_by_space[1].c_str(), split_by_space[2].c_str(), split_by_space[3].c_str());
+                  res.mission_status = 5;
+                } else {
+                  res.mission_status = 6;
+                  break;
+                }
+              } else if(split_by_space[0] == "turnto"){
+                if(split_by_space.size() == 2 && is_number(split_by_space[1])){
+                  ROS_INFO("TURN TO  %s", split_by_space[1].c_str());
+                  res.mission_status = 5;
+                } else {
+                  res.mission_status = 6;
+                  break;
+                }
               } else {
                 res.mission_status = 6;
+                break;
               }
-              //ROS_INFO("Para: %s", split_by_space[i].c_str());
 
             }
+            break;
           }
           catch (const ifstream::failure& e) {
             res.mission_status = 0;
@@ -110,7 +132,6 @@ bool start_mission(mission_node::start_mission::Request  &req,
     }
     closedir(dir);
   }
-  ROS_INFO("mission request: name=%s, status=%ld", req.mission_name.c_str(), res.mission_status);
   return true;
 }
 
