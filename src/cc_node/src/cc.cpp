@@ -145,14 +145,12 @@ bool manual_action(cc_node::manual_action::Request  &req,
   } else {
     res.m_action_status = 6;
   }
-  ROS_INFO("request: action type=%ld, action status=%ld", req.m_action_type, res.m_action_status);
   return true;
 }
 
 /*
   Autonomous operations service
 */
-
 bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
                   cc_node::a_operation_fly_to_pos::Response &res)
 {
@@ -164,7 +162,7 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
     res.a_operation_status = 7;
   } else if (!airborne){
     res.a_operation_status = 11;
-  } else if (!in_mission){
+  } else if (in_mission){
     res.a_operation_status = 8;
   }
   ROS_INFO("fly to pos(lat,lon): %ld, %ld", req.pos_lat, req.pos_lon);
@@ -183,10 +181,9 @@ bool a_operation_landing(cc_node::a_operation_landing::Request  &req,
     res.a_operation_status = 7;
   } else if (!airborne){
     res.a_operation_status = 11;
-  } else if (!in_mission){
+  } else if (in_mission){
     res.a_operation_status = 8;
   }
-  ROS_INFO("reason for landing: %ld", req.a_operation_landing_reason);
   return true;
 }
 
@@ -205,7 +202,6 @@ bool a_operation_liftoff(cc_node::a_operation_liftoff::Request  &req,
   } else if (in_mission){
     res.a_operation_status = 8;
   }
-  ROS_INFO("taking off to height: %i", req.a_operation_takeoff_height);
   return true;
 }
 
@@ -221,7 +217,6 @@ bool a_operation_stop_action_and_hover(cc_node::a_operation_stop_action_and_hove
   } else if (!airborne){
     res.a_operation_status = 11;
   }
-  ROS_INFO("reason for pausing: %ld", req.a_operation_pausing_reason);
   return true;
 }
 
@@ -237,7 +232,6 @@ bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Reque
   } else if (!airborne){
     res.a_operation_status = 11;
   }
-  ROS_INFO("turning to dir: %ld", req.a_operation_dir_in_deg);
   return true;
 }
 
