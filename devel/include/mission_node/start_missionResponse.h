@@ -24,10 +24,14 @@ struct start_missionResponse_
   typedef start_missionResponse_<ContainerAllocator> Type;
 
   start_missionResponse_()
-    : mission_status(0)  {
+    : mission_status(0)
+    , operation_status(0)
+    , action_status(0)  {
     }
   start_missionResponse_(const ContainerAllocator& _alloc)
-    : mission_status(0)  {
+    : mission_status(0)
+    , operation_status(0)
+    , action_status(0)  {
   (void)_alloc;
     }
 
@@ -35,6 +39,12 @@ struct start_missionResponse_
 
    typedef int64_t _mission_status_type;
   _mission_status_type mission_status;
+
+   typedef int64_t _operation_status_type;
+  _operation_status_type operation_status;
+
+   typedef int64_t _action_status_type;
+  _action_status_type action_status;
 
 
 
@@ -114,12 +124,12 @@ struct MD5Sum< ::mission_node::start_missionResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "c59dae9ebc238d37356f7d711e72da76";
+    return "a58427b0fb5f9b69a1a62de1cf1c546b";
   }
 
   static const char* value(const ::mission_node::start_missionResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xc59dae9ebc238d37ULL;
-  static const uint64_t static_value2 = 0x356f7d711e72da76ULL;
+  static const uint64_t static_value1 = 0xa58427b0fb5f9b69ULL;
+  static const uint64_t static_value2 = 0xa1a62de1cf1c546bULL;
 };
 
 template<class ContainerAllocator>
@@ -139,6 +149,8 @@ struct Definition< ::mission_node::start_missionResponse_<ContainerAllocator> >
   static const char* value()
   {
     return "int64 mission_status\n\
+int64 operation_status\n\
+int64 action_status\n\
 \n\
 ";
   }
@@ -159,6 +171,8 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.mission_status);
+      stream.next(m.operation_status);
+      stream.next(m.action_status);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -179,6 +193,10 @@ struct Printer< ::mission_node::start_missionResponse_<ContainerAllocator> >
   {
     s << indent << "mission_status: ";
     Printer<int64_t>::stream(s, indent + "  ", v.mission_status);
+    s << indent << "operation_status: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.operation_status);
+    s << indent << "action_status: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.action_status);
   }
 };
 

@@ -55,10 +55,10 @@
   "mission_node/start_missionRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<start_mission-request>)))
   "Returns md5sum for a message object of type '<start_mission-request>"
-  "c1bb7be27d31f8856aed46e2dd0be34b")
+  "fe261445a9489aed43e3808ba8261eed")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'start_mission-request)))
   "Returns md5sum for a message object of type 'start_mission-request"
-  "c1bb7be27d31f8856aed46e2dd0be34b")
+  "fe261445a9489aed43e3808ba8261eed")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<start_mission-request>)))
   "Returns full string definition for message of type '<start_mission-request>"
   (cl:format cl:nil "string mission_name~%~%~%"))
@@ -81,6 +81,16 @@
     :reader mission_status
     :initarg :mission_status
     :type cl:integer
+    :initform 0)
+   (operation_status
+    :reader operation_status
+    :initarg :operation_status
+    :type cl:integer
+    :initform 0)
+   (action_status
+    :reader action_status
+    :initarg :action_status
+    :type cl:integer
     :initform 0))
 )
 
@@ -96,9 +106,39 @@
 (cl:defmethod mission_status-val ((m <start_mission-response>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader mission_node-srv:mission_status-val is deprecated.  Use mission_node-srv:mission_status instead.")
   (mission_status m))
+
+(cl:ensure-generic-function 'operation_status-val :lambda-list '(m))
+(cl:defmethod operation_status-val ((m <start_mission-response>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader mission_node-srv:operation_status-val is deprecated.  Use mission_node-srv:operation_status instead.")
+  (operation_status m))
+
+(cl:ensure-generic-function 'action_status-val :lambda-list '(m))
+(cl:defmethod action_status-val ((m <start_mission-response>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader mission_node-srv:action_status-val is deprecated.  Use mission_node-srv:action_status instead.")
+  (action_status m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <start_mission-response>) ostream)
   "Serializes a message object of type '<start_mission-response>"
   (cl:let* ((signed (cl:slot-value msg 'mission_status)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
+    )
+  (cl:let* ((signed (cl:slot-value msg 'operation_status)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
+    )
+  (cl:let* ((signed (cl:slot-value msg 'action_status)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
@@ -121,6 +161,26 @@
       (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'mission_status) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'operation_status) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'action_status) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<start_mission-response>)))
@@ -131,24 +191,28 @@
   "mission_node/start_missionResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<start_mission-response>)))
   "Returns md5sum for a message object of type '<start_mission-response>"
-  "c1bb7be27d31f8856aed46e2dd0be34b")
+  "fe261445a9489aed43e3808ba8261eed")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'start_mission-response)))
   "Returns md5sum for a message object of type 'start_mission-response"
-  "c1bb7be27d31f8856aed46e2dd0be34b")
+  "fe261445a9489aed43e3808ba8261eed")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<start_mission-response>)))
   "Returns full string definition for message of type '<start_mission-response>"
-  (cl:format cl:nil "int64 mission_status~%~%~%~%"))
+  (cl:format cl:nil "int64 mission_status~%int64 operation_status~%int64 action_status~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'start_mission-response)))
   "Returns full string definition for message of type 'start_mission-response"
-  (cl:format cl:nil "int64 mission_status~%~%~%~%"))
+  (cl:format cl:nil "int64 mission_status~%int64 operation_status~%int64 action_status~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <start_mission-response>))
   (cl:+ 0
+     8
+     8
      8
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <start_mission-response>))
   "Converts a ROS message object to a list"
   (cl:list 'start_mission-response
     (cl:cons ':mission_status (mission_status msg))
+    (cl:cons ':operation_status (operation_status msg))
+    (cl:cons ':action_status (action_status msg))
 ))
 (cl:defmethod roslisp-msg-protocol:service-request-type ((msg (cl:eql 'start_mission)))
   'start_mission-request)

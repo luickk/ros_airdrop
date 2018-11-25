@@ -3,4 +3,8 @@
           MISSION_NAME
           MISSION_STATUS-VAL
           MISSION_STATUS
+          OPERATION_STATUS-VAL
+          OPERATION_STATUS
+          ACTION_STATUS-VAL
+          ACTION_STATUS
 ))

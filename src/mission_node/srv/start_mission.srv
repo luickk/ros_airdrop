@@ -1,3 +1,5 @@
 string mission_name
 ---
 int64 mission_status
+int64 operation_status
+int64 action_status

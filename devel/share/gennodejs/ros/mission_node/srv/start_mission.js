@@ -95,6 +95,8 @@ class start_missionResponse {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.mission_status = null;
+      this.operation_status = null;
+      this.action_status = null;
     }
     else {
       if (initObj.hasOwnProperty('mission_status')) {
@@ -103,6 +105,18 @@ class start_missionResponse {
       else {
         this.mission_status = 0;
       }
+      if (initObj.hasOwnProperty('operation_status')) {
+        this.operation_status = initObj.operation_status
+      }
+      else {
+        this.operation_status = 0;
+      }
+      if (initObj.hasOwnProperty('action_status')) {
+        this.action_status = initObj.action_status
+      }
+      else {
+        this.action_status = 0;
+      }
     }
   }
 
@@ -110,6 +124,10 @@ class start_missionResponse {
     // Serializes a message object of type start_missionResponse
     // Serialize message field [mission_status]
     bufferOffset = _serializer.int64(obj.mission_status, buffer, bufferOffset);
+    // Serialize message field [operation_status]
+    bufferOffset = _serializer.int64(obj.operation_status, buffer, bufferOffset);
+    // Serialize message field [action_status]
+    bufferOffset = _serializer.int64(obj.action_status, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -119,11 +137,15 @@ class start_missionResponse {
     let data = new start_missionResponse(null);
     // Deserialize message field [mission_status]
     data.mission_status = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [operation_status]
+    data.operation_status = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [action_status]
+    data.action_status = _deserializer.int64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 8;
+    return 24;
   }
 
   static datatype() {
@@ -133,13 +155,15 @@ class start_missionResponse {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'c59dae9ebc238d37356f7d711e72da76';
+    return 'a58427b0fb5f9b69a1a62de1cf1c546b';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     int64 mission_status
+    int64 operation_status
+    int64 action_status
     
     
     `;
@@ -158,6 +182,20 @@ class start_missionResponse {
       resolved.mission_status = 0
     }
 
+    if (msg.operation_status !== undefined) {
+      resolved.operation_status = msg.operation_status;
+    }
+    else {
+      resolved.operation_status = 0
+    }
+
+    if (msg.action_status !== undefined) {
+      resolved.action_status = msg.action_status;
+    }
+    else {
+      resolved.action_status = 0
+    }
+
     return resolved;
     }
 };
@@ -165,6 +203,6 @@ class start_missionResponse {
 module.exports = {
   Request: start_missionRequest,
   Response: start_missionResponse,
-  md5sum() { return 'c1bb7be27d31f8856aed46e2dd0be34b'; },
+  md5sum() { return 'fe261445a9489aed43e3808ba8261eed'; },
   datatype() { return 'mission_node/start_mission'; }
 };
