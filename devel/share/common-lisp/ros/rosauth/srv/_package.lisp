@@ -1,0 +1,10 @@
+(cl:defpackage rosauth-srv
+  (:use )
+  (:export
+   "AUTHENTICATION"
+   "<AUTHENTICATION-REQUEST>"
+   "AUTHENTICATION-REQUEST"
+   "<AUTHENTICATION-RESPONSE>"
+   "AUTHENTICATION-RESPONSE"
+  ))
+

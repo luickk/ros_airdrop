@@ -247,6 +247,9 @@ RT_LIBRARY:FILEPATH=/usr/lib/arm-linux-gnueabihf/librt.so
 //Enable debian style python package layout
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 
+//Path to a file.
+_file_name:FILEPATH=/home/pi/airdrop_ros/src/rosbridge_suite/rosbridge_library/test/internal/test_internal.test
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 
@@ -277,6 +280,9 @@ gennodejs_DIR:PATH=/opt/ros/kinetic/share/gennodejs/cmake
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/kinetic/share/genpy/cmake
 
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/kinetic/share/geometry_msgs/cmake
+
 //Value Computed by CMake
 gps_node_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/gps_node
 
@@ -284,7 +290,7 @@ gps_node_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/gps_node
 gps_node_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/gps_node
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/kinetic/lib/librostime.so
 
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
@@ -307,6 +313,36 @@ rc_node_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/rc_node
 //Value Computed by CMake
 rc_node_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/rc_node
 
+//Value Computed by CMake
+rosapi_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/rosbridge_suite/rosapi
+
+//Value Computed by CMake
+rosapi_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/rosbridge_suite/rosapi
+
+//Value Computed by CMake
+rosauth_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/rosauth
+
+//Value Computed by CMake
+rosauth_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/rosauth
+
+//Value Computed by CMake
+rosbridge_library_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/rosbridge_suite/rosbridge_library
+
+//Value Computed by CMake
+rosbridge_library_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/rosbridge_suite/rosbridge_library
+
+//Value Computed by CMake
+rosbridge_server_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/rosbridge_suite/rosbridge_server
+
+//Value Computed by CMake
+rosbridge_server_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/rosbridge_suite/rosbridge_server
+
+//Value Computed by CMake
+rosbridge_suite_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/rosbridge_suite/rosbridge_suite
+
+//Value Computed by CMake
+rosbridge_suite_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/rosbridge_suite/rosbridge_suite
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
 
@@ -324,6 +360,9 @@ rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
+
+//The directory containing a CMake configuration file for rostest.
+rostest_DIR:PATH=/opt/ros/kinetic/share/rostest/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
@@ -436,7 +475,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
