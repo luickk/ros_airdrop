@@ -62,6 +62,7 @@ add_service_files(
   a_operation_liftoff.srv
   a_operation_stop_action_and_hover.srv
   a_operation_turn_to_direction.srv
+  get_set_take_off_pos.srv
   manual_action.srv
 )
 

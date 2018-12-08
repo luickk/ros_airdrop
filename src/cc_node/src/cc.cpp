@@ -7,6 +7,9 @@
 #include "cc_node/a_operation_liftoff.h"
 #include "cc_node/a_operation_stop_action_and_hover.h"
 #include "cc_node/a_operation_turn_to_direction.h"
+#include "cc_node/get_set_take_off_pos.h"
+
+#include "gps_node/gps_raw.h"
 
 #include "libnaza/pca9685.h"
 #include "libnaza/naza_interface_manual.h"
@@ -14,43 +17,15 @@
 
 #include <iostream>
 #include <sstream>
-
 /*
-## Action Codes
-
-ACTION_SUCCESSFUL = 1
-ACTION_PREVENTED_BY_AUTONOMOUS_OP = 2
-ACTION_BLOCKED = 3
-DRONE_AIRBORNE = 4
-DRONE_NOT_AIRBORNE = 5
-ACTION_FAILED = 6
-
-## Operation Codes
-
-OPERATION_SUCCESSFUL = 7
-OPERATION_PREVENTED_BY_ONGOING_OP = 8
-OPERATION_BLOCKED = 9
-DRONE_AIRBORNE = 10
-DRONE_NOT_AIRBORNE = 11
-OPERATION_FAILED = 12
-
-## Mission Codes
-
-MISSION_NOT_FOUND = 13
-MISSION_DIR_NOT_FOUND = 14
-
-MISSION_HALT = 15
-MISSION_STOPPED = 16
-MISSION_ONGOING = 17
-MISSION_DONE = 18
-
-MISSION_PARSING_ERROR = 19
-
-MISSION_FAILED = 20
+  INITS
 */
+
+ros::NodeHandle n;
 
 PCA9685 pca9685;
 ConfigFile cf("/etc/naza/pwm_config.txt");
+
 
 naza_interface_manual_c naza_m;
 naza_interface_auto_c naza_a;
@@ -62,6 +37,15 @@ naza_interface_auto_c naza_a;
 
 bool airborne=false;
 bool in_mission=false;
+
+gps_node::gps_raw gps_raw_startup_pos;
+
+/*
+  ROS DRONE PARAMETERS
+*/
+
+// 0 only for testing purposes!
+int home_point_sat_threshold = 0;
 
 /*
   Manual actions service
@@ -192,6 +176,14 @@ bool a_operation_liftoff(cc_node::a_operation_liftoff::Request  &req,
 {
   if(req.a_operation_takeoff_height >= 10 && !airborne && !in_mission)
   {
+    ros::ServiceClient client = n.serviceClient<cc_node::get_set_take_off_pos>("get_set_take_off_pos");
+    cc_node::get_set_take_off_pos srv;
+    srv.request.get_set = "set";
+    if (client.call(srv))
+    {
+      res.a_operation_status = srv.response.system_status;
+    }else{ROS_ERROR("Failed to call service");return 1;}
+
     in_mission = true;
     naza_a.auto_liftoff(cf, pca9685, naza_m, req.a_operation_takeoff_height);
     in_mission = false;
@@ -235,13 +227,33 @@ bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Reque
   return true;
 }
 
+bool get_set_take_off_pos(cc_node::get_set_take_off_pos::Request  &req,
+                  cc_node::get_set_take_off_pos::Response &res)
+{
+  if(req.get_set == "set")
+  {
+    gps_node::gps_raw latest_gps_data = *ros::topic::waitForMessage<gps_node::gps_raw>("/gps_raw", ros::Duration(10));
+    if(latest_gps_data.gps_sats >= home_point_sat_threshold) {
+      gps_raw_startup_pos = latest_gps_data;
+      res.system_status = 22;
+    } else {
+      res.system_status = 21;
+    }
+  } else if (req.get_set == "get"){
+    res.gps_sats = gps_raw_startup_pos.gps_sats;
+    res.lat = gps_raw_startup_pos.lat;
+    res.lon = gps_raw_startup_pos.lon;
+    res.heading = gps_raw_startup_pos.heading;
+    res.alt = gps_raw_startup_pos.alt;
+  }
+  return true;
+}
 /*
   CC Main function
 */
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "Command and Control Node");
-  ros::NodeHandle n;
   pca9685.SetFrequency(50);
 
   ros::ServiceServer service = n.advertiseService("manual_action", manual_action);
@@ -255,6 +267,8 @@ int main(int argc, char **argv)
   ros::ServiceServer service4 = n.advertiseService("a_operation_stop_action_and_hover", a_operation_stop_action_and_hover);
 
   ros::ServiceServer service5 = n.advertiseService("a_operation_turn_to_direction", a_operation_turn_to_direction);
+
+  ros::ServiceServer service6 = n.advertiseService("get_set_take_off_pos", get_set_take_off_pos);
 
   ROS_INFO("CC Node Up and Ready all Services are go!");
   ros::spin();

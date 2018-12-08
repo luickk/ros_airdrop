@@ -80,6 +80,7 @@
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/cc_node_gencpp.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/test.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir
+/home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/install/strip.dir
@@ -106,8 +107,8 @@
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/roscpp_generate_messages_nodejs.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/std_msgs_generate_messages_eus.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir
+/home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_get_set_take_off_pos.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir
-/home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir
 /home/pi/airdrop_ros/build/gps_node/CMakeFiles/install/local.dir
 /home/pi/airdrop_ros/build/gps_node/CMakeFiles/list_install_components.dir
 /home/pi/airdrop_ros/build/gps_node/CMakeFiles/test.dir
