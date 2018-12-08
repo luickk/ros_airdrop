@@ -17,11 +17,12 @@
 
 #include <iostream>
 #include <sstream>
+#include <boost/asio.hpp>
 /*
   INITS
 */
 
-ros::NodeHandle n;
+boost::shared_ptr<ros::NodeHandle> n;
 
 PCA9685 pca9685;
 ConfigFile cf("/etc/naza/pwm_config.txt");
@@ -176,7 +177,7 @@ bool a_operation_liftoff(cc_node::a_operation_liftoff::Request  &req,
 {
   if(req.a_operation_takeoff_height >= 10 && !airborne && !in_mission)
   {
-    ros::ServiceClient client = n.serviceClient<cc_node::get_set_take_off_pos>("get_set_take_off_pos");
+    ros::ServiceClient client = n->serviceClient<cc_node::get_set_take_off_pos>("get_set_take_off_pos");
     cc_node::get_set_take_off_pos srv;
     srv.request.get_set = "set";
     if (client.call(srv))
@@ -254,21 +255,23 @@ bool get_set_take_off_pos(cc_node::get_set_take_off_pos::Request  &req,
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "Command and Control Node");
+
+  n.reset(new ros::NodeHandle);
   pca9685.SetFrequency(50);
 
-  ros::ServiceServer service = n.advertiseService("manual_action", manual_action);
+  ros::ServiceServer service = n->advertiseService("manual_action", manual_action);
 
-  ros::ServiceServer service1 = n.advertiseService("a_operation_fly_to_pos", a_operation_fly_to_pos);
+  ros::ServiceServer service1 = n->advertiseService("a_operation_fly_to_pos", a_operation_fly_to_pos);
 
-  ros::ServiceServer service2 = n.advertiseService("a_operation_landing", a_operation_landing);
+  ros::ServiceServer service2 = n->advertiseService("a_operation_landing", a_operation_landing);
 
-  ros::ServiceServer service3 = n.advertiseService("a_operation_liftoff", a_operation_liftoff);
+  ros::ServiceServer service3 = n->advertiseService("a_operation_liftoff", a_operation_liftoff);
 
-  ros::ServiceServer service4 = n.advertiseService("a_operation_stop_action_and_hover", a_operation_stop_action_and_hover);
+  ros::ServiceServer service4 = n->advertiseService("a_operation_stop_action_and_hover", a_operation_stop_action_and_hover);
 
-  ros::ServiceServer service5 = n.advertiseService("a_operation_turn_to_direction", a_operation_turn_to_direction);
+  ros::ServiceServer service5 = n->advertiseService("a_operation_turn_to_direction", a_operation_turn_to_direction);
 
-  ros::ServiceServer service6 = n.advertiseService("get_set_take_off_pos", get_set_take_off_pos);
+  ros::ServiceServer service6 = n->advertiseService("get_set_take_off_pos", get_set_take_off_pos);
 
   ROS_INFO("CC Node Up and Ready all Services are go!");
   ros::spin();
