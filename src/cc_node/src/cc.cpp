@@ -237,6 +237,7 @@ bool get_set_take_off_pos(cc_node::get_set_take_off_pos::Request  &req,
     if(latest_gps_data.gps_sats >= home_point_sat_threshold) {
       gps_raw_startup_pos = latest_gps_data;
       res.system_status = 22;
+      ROS_INFO("SET HOME POINT TO LATEST LOC");
     } else {
       res.system_status = 21;
     }

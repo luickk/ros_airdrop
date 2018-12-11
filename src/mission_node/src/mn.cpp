@@ -9,6 +9,7 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 
+#include "mission_node/list_missions.h"
 #include "mission_node/start_mission.h"
 
 #include "cc_node/a_operation_fly_to_pos.h"
@@ -229,12 +230,46 @@ bool start_mission(mission_node::start_mission::Request  &req,
   return true;
 }
 
+
+/*
+  mission list
+  mission path: /etc/airdrop/missions
+*/
+bool list_missions(mission_node::list_missions::Request  &req,
+                  mission_node::list_missions::Response &res)
+{
+  const char *path = "/etc/airdrop/missions";
+  struct dirent *entry;
+  DIR *dir = opendir(path);
+
+  if (dir == NULL)
+  {
+    ROS_INFO("Mission dir not found");
+  }
+  string file_name = "";
+  ifstream file_open;
+
+  ros::NodeHandle n;
+
+  while ((entry = readdir(dir)) != NULL)
+  {
+    file_name = entry->d_name;
+    if(!(file_name == "." || file_name == ".."))
+    {
+      res.mission_list.push_back(file_name);
+    }
+  }
+  return true;
+}
+
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "Mission engine node");
   ros::NodeHandle n;
 
   ros::ServiceServer service = n.advertiseService("start_mission", start_mission);
+
+  ros::ServiceServer service1 = n.advertiseService("list_missions", list_missions);
 
   ROS_INFO("RC Node Up and Ready all Services are go!");
   ros::spin();
