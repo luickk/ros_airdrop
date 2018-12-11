@@ -208,7 +208,7 @@ bool start_mission(mission_node::start_mission::Request  &req,
             res.mission_status = 19;
             break;
           }
-          break;
+
         }
       } catch (const ifstream::failure& e) {
         res.mission_status = 13;
