@@ -22,8 +22,6 @@
   INITS
 */
 
-boost::shared_ptr<ros::NodeHandle> n;
-
 PCA9685 pca9685;
 ConfigFile cf("/etc/naza/pwm_config.txt");
 
@@ -134,6 +132,21 @@ bool manual_action(cc_node::manual_action::Request  &req,
 }
 
 /*
+  Local copy of get_set_take_off_pos service, for usage in service callbacks
+*/
+bool set_take_off_pos_local()
+{
+  gps_node::gps_raw latest_gps_data = *ros::topic::waitForMessage<gps_node::gps_raw>("/gps_raw", ros::Duration(10));
+  if(latest_gps_data.gps_sats >= home_point_sat_threshold) {
+    gps_raw_startup_pos = latest_gps_data;
+    ROS_INFO("SET HOME POINT TO LATEST LOC");
+  } else {
+    return false;
+  }
+  return true;
+}
+
+/*
   Autonomous operations service
 */
 bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
@@ -177,19 +190,15 @@ bool a_operation_liftoff(cc_node::a_operation_liftoff::Request  &req,
 {
   if(req.a_operation_takeoff_height >= 10 && !airborne && !in_mission)
   {
-    ros::ServiceClient client = n->serviceClient<cc_node::get_set_take_off_pos>("get_set_take_off_pos");
-    cc_node::get_set_take_off_pos srv;
-    srv.request.get_set = "set";
-    if (client.call(srv))
-    {
-      res.a_operation_status = srv.response.system_status;
-    }else{ROS_ERROR("Failed to call service");return 1;}
-
-    in_mission = true;
-    naza_a.auto_liftoff(cf, pca9685, naza_m, req.a_operation_takeoff_height);
-    in_mission = false;
-    airborne = true;
-    res.a_operation_status = 7;
+    if(set_take_off_pos_local()){
+      in_mission = true;
+      naza_a.auto_liftoff(cf, pca9685, naza_m, req.a_operation_takeoff_height);
+      in_mission = false;
+      airborne = true;
+      res.a_operation_status = 7;
+    } else {
+      res.a_operation_status = 21;
+    }
   } else if (!airborne){
     res.a_operation_status = 11;
   } else if (in_mission){
@@ -228,16 +237,16 @@ bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Reque
   return true;
 }
 
+/*
+  Service to set startup location
+*/
 bool get_set_take_off_pos(cc_node::get_set_take_off_pos::Request  &req,
                   cc_node::get_set_take_off_pos::Response &res)
 {
   if(req.get_set == "set")
   {
-    gps_node::gps_raw latest_gps_data = *ros::topic::waitForMessage<gps_node::gps_raw>("/gps_raw", ros::Duration(10));
-    if(latest_gps_data.gps_sats >= home_point_sat_threshold) {
-      gps_raw_startup_pos = latest_gps_data;
+    if(set_take_off_pos_local()){
       res.system_status = 22;
-      ROS_INFO("SET HOME POINT TO LATEST LOC");
     } else {
       res.system_status = 21;
     }
@@ -256,23 +265,22 @@ bool get_set_take_off_pos(cc_node::get_set_take_off_pos::Request  &req,
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "Command and Control Node");
-
-  n.reset(new ros::NodeHandle);
+  ros::NodeHandle n;
   pca9685.SetFrequency(50);
 
-  ros::ServiceServer service = n->advertiseService("manual_action", manual_action);
+  ros::ServiceServer service = n.advertiseService("manual_action", manual_action);
 
-  ros::ServiceServer service1 = n->advertiseService("a_operation_fly_to_pos", a_operation_fly_to_pos);
+  ros::ServiceServer service1 = n.advertiseService("a_operation_fly_to_pos", a_operation_fly_to_pos);
 
-  ros::ServiceServer service2 = n->advertiseService("a_operation_landing", a_operation_landing);
+  ros::ServiceServer service2 = n.advertiseService("a_operation_landing", a_operation_landing);
 
-  ros::ServiceServer service3 = n->advertiseService("a_operation_liftoff", a_operation_liftoff);
+  ros::ServiceServer service3 = n.advertiseService("a_operation_liftoff", a_operation_liftoff);
 
-  ros::ServiceServer service4 = n->advertiseService("a_operation_stop_action_and_hover", a_operation_stop_action_and_hover);
+  ros::ServiceServer service4 = n.advertiseService("a_operation_stop_action_and_hover", a_operation_stop_action_and_hover);
 
-  ros::ServiceServer service5 = n->advertiseService("a_operation_turn_to_direction", a_operation_turn_to_direction);
+  ros::ServiceServer service5 = n.advertiseService("a_operation_turn_to_direction", a_operation_turn_to_direction);
 
-  ros::ServiceServer service6 = n->advertiseService("get_set_take_off_pos", get_set_take_off_pos);
+  ros::ServiceServer service6 = n.advertiseService("get_set_take_off_pos", get_set_take_off_pos);
 
   ROS_INFO("CC Node Up and Ready all Services are go!");
   ros::spin();

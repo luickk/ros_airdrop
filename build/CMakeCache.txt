@@ -14,8 +14,29 @@
 # EXTERNAL cache entries
 ########################
 
+//The threading library used by boost-thread
+BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/arm-linux-gnueabihf/libpthread.so
+
 //Build dynamically-linked binaries
 BUILD_SHARED_LIBS:BOOL=ON
+
+//Boost atomic library (debug)
+Boost_ATOMIC_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_atomic.so
+
+//Boost atomic library (release)
+Boost_ATOMIC_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_atomic.so
+
+//Boost chrono library (debug)
+Boost_CHRONO_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_chrono.so
+
+//Boost chrono library (release)
+Boost_CHRONO_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_chrono.so
+
+//Boost date_time library (debug)
+Boost_DATE_TIME_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_date_time.so
+
+//Boost date_time library (release)
+Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_date_time.so
 
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=Boost_DIR-NOTFOUND
@@ -34,6 +55,18 @@ Boost_PYTHON_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_python
 
 //Boost python library (release)
 Boost_PYTHON_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_python.so
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_system.so
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_system.so
+
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_thread.so
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_thread.so
 
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
@@ -294,6 +327,15 @@ SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 //Path to a file.
 _file_name:FILEPATH=/home/pi/airdrop_ros/src/rosbridge_suite/rosbridge_library/test/internal/test_internal.test
 
+//Path to a file.
+_path_name:FILEPATH=/home/pi/airdrop_ros/src/diagnostics/diagnostic_analysis/test/bag_csv_test.py
+
+//The directory containing a CMake configuration file for bond.
+bond_DIR:PATH=/opt/ros/kinetic/share/bond/cmake
+
+//The directory containing a CMake configuration file for bondcpp.
+bondcpp_DIR:PATH=/opt/ros/kinetic/share/bondcpp/cmake
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 
@@ -302,6 +344,9 @@ cc_node_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/cc_node
 
 //Value Computed by CMake
 cc_node_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/cc_node
+
+//The directory containing a CMake configuration file for class_loader.
+class_loader_DIR:PATH=/opt/ros/kinetic/share/class_loader/cmake
 
 //Value Computed by CMake
 compressed_depth_image_transport_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/image_transport_plugins/compressed_depth_image_transport
@@ -323,6 +368,48 @@ cv_bridge_DIR:PATH=cv_bridge_DIR-NOTFOUND
 
 //Value Computed by CMake
 cv_bridge_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/vision_opencv/cv_bridge
+
+//Value Computed by CMake
+diagnostic_aggregator_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/diagnostics/diagnostic_aggregator
+
+//The directory containing a CMake configuration file for diagnostic_aggregator.
+diagnostic_aggregator_DIR:PATH=/home/pi/airdrop_ros/devel/share/diagnostic_aggregator/cmake
+
+//Dependencies for the target
+diagnostic_aggregator_LIB_DEPENDS:STATIC=general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/arm-linux-gnueabihf/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;general;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml.so;general;/opt/ros/kinetic/lib/libbondcpp.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;
+
+//Value Computed by CMake
+diagnostic_aggregator_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/diagnostics/diagnostic_aggregator
+
+//Value Computed by CMake
+diagnostic_analysis_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/diagnostics/diagnostic_analysis
+
+//Value Computed by CMake
+diagnostic_analysis_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/diagnostics/diagnostic_analysis
+
+//Value Computed by CMake
+diagnostic_common_diagnostics_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/diagnostics/diagnostic_common_diagnostics
+
+//Value Computed by CMake
+diagnostic_common_diagnostics_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/diagnostics/diagnostic_common_diagnostics
+
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/kinetic/share/diagnostic_msgs/cmake
+
+//Value Computed by CMake
+diagnostic_updater_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/diagnostics/diagnostic_updater
+
+//The directory containing a CMake configuration file for diagnostic_updater.
+diagnostic_updater_DIR:PATH=/home/pi/airdrop_ros/devel/share/diagnostic_updater/cmake
+
+//Value Computed by CMake
+diagnostic_updater_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/diagnostics/diagnostic_updater
+
+//Value Computed by CMake
+diagnostics_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/diagnostics/diagnostics
+
+//Value Computed by CMake
+diagnostics_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/diagnostics/diagnostics
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
@@ -381,6 +468,9 @@ opencv_tests_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/vision_opencv/opencv_t
 //Value Computed by CMake
 opencv_tests_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/vision_opencv/opencv_tests
 
+//The directory containing a CMake configuration file for pluginlib.
+pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
+
 //Value Computed by CMake
 raspicam_node_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/raspicam_node
 
@@ -404,6 +494,12 @@ rosauth_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/rosauth
 
 //Value Computed by CMake
 rosauth_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/rosauth
+
+//The directory containing a CMake configuration file for rosbag.
+rosbag_DIR:PATH=/opt/ros/kinetic/share/rosbag/cmake
+
+//The directory containing a CMake configuration file for rosbag_storage.
+rosbag_storage_DIR:PATH=/opt/ros/kinetic/share/rosbag_storage/cmake
 
 //Value Computed by CMake
 rosbridge_library_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/rosbridge_suite/rosbridge_library
@@ -435,8 +531,23 @@ roscpp_serialization_DIR:PATH=/opt/ros/kinetic/share/roscpp_serialization/cmake
 //The directory containing a CMake configuration file for roscpp_traits.
 roscpp_traits_DIR:PATH=/opt/ros/kinetic/share/roscpp_traits/cmake
 
+//Value Computed by CMake
+rosdiagnostic_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/diagnostics/rosdiagnostic
+
+//Value Computed by CMake
+rosdiagnostic_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/diagnostics/rosdiagnostic
+
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
+
+//The directory containing a CMake configuration file for roslib.
+roslib_DIR:PATH=/opt/ros/kinetic/share/roslib/cmake
+
+//The directory containing a CMake configuration file for roslz4.
+roslz4_DIR:PATH=/opt/ros/kinetic/share/roslz4/cmake
+
+//The directory containing a CMake configuration file for rospack.
+rospack_DIR:PATH=/opt/ros/kinetic/share/rospack/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
@@ -447,11 +558,35 @@ rostest_DIR:PATH=/opt/ros/kinetic/share/rostest/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
 
+//Value Computed by CMake
+self_test_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/diagnostics/self_test
+
+//Value Computed by CMake
+self_test_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/diagnostics/self_test
+
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
 
+//The directory containing a CMake configuration file for smclib.
+smclib_DIR:PATH=/opt/ros/kinetic/share/smclib/cmake
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/opt/ros/kinetic/share/std_srvs/cmake
+
+//Value Computed by CMake
+test_diagnostic_aggregator_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/diagnostics/test_diagnostic_aggregator
+
+//Dependencies for the target
+test_diagnostic_aggregator_LIB_DEPENDS:STATIC=general;diagnostic_aggregator;general;/opt/ros/kinetic/lib/libbondcpp.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/arm-linux-gnueabihf/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;general;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;
+
+//Value Computed by CMake
+test_diagnostic_aggregator_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/diagnostics/test_diagnostic_aggregator
+
+//The directory containing a CMake configuration file for topic_tools.
+topic_tools_DIR:PATH=/opt/ros/kinetic/share/topic_tools/cmake
 
 //Value Computed by CMake
 vision_opencv_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/vision_opencv/vision_opencv
@@ -467,6 +602,18 @@ xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_DEBUG
+Boost_ATOMIC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_RELEASE
+Boost_ATOMIC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_DEBUG
+Boost_CHRONO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_RELEASE
+Boost_CHRONO_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_DEBUG
+Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_RELEASE
+Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_DIR
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_INCLUDE_DIR
@@ -479,6 +626,14 @@ Boost_LIBRARY_DIR_RELEASE-ADVANCED:INTERNAL=1
 Boost_PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_PYTHON_LIBRARY_RELEASE
 Boost_PYTHON_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/pi/airdrop_ros/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/pi/airdrop_ros/build/test_results
@@ -576,7 +731,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -657,7 +812,7 @@ PYTHON_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
 PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=python
+_Boost_COMPONENTS_SEARCHED:INTERNAL=atomic;chrono;date_time;python;system;thread
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
 //Last used Boost_LIBRARY_DIR_DEBUG value.
