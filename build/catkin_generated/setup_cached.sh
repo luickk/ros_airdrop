@@ -7,4 +7,11 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/pi/airdrop_ros/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/pi/airdrop_ros/devel/lib:$LD_LIBRARY_PATH"
+export PATH="/home/pi/airdrop_ros/devel/bin:$PATH"
+export PKG_CONFIG_PATH="/home/pi/airdrop_ros/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/pi/airdrop_ros/build"
+export PYTHONPATH="/home/pi/airdrop_ros/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/pi/airdrop_ros/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/pi/airdrop_ros/src:$ROS_PACKAGE_PATH"

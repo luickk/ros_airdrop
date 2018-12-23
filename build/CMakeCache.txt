@@ -41,6 +41,12 @@ Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_d
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=Boost_DIR-NOTFOUND
 
+//Boost filesystem library (debug)
+Boost_FILESYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
+
+//Boost filesystem library (release)
+Boost_FILESYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
+
 //Path to a file.
 Boost_INCLUDE_DIR:PATH=/usr/include
 
@@ -92,7 +98,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -283,13 +289,16 @@ OpenCV_3RDPARTY_LIB_DIR_OPT:PATH=
 OpenCV_CONFIG_PATH:FILEPATH=/usr/share/OpenCV
 
 //The directory containing a CMake configuration file for OpenCV.
-OpenCV_DIR:PATH=OpenCV_DIR-NOTFOUND
+OpenCV_DIR:PATH=/usr/local/share/OpenCV
 
 //Path where debug OpenCV libraries are located
 OpenCV_LIB_DIR_DBG:PATH=
 
 //Path where release OpenCV libraries are located
 OpenCV_LIB_DIR_OPT:PATH=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
@@ -302,6 +311,9 @@ PYTHON_LIBRARY:FILEPATH=/usr/lib/arm-linux-gnueabihf/libpython2.7.so
 
 //Path to a library.
 PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
+
+//Numpy include directory
+PYTHON_NUMPY_INCLUDE_DIR:PATH=/usr/lib/python2.7/dist-packages/numpy/core/include
 
 //Specify specific Python version to use ('major.minor' or 'major')
 PYTHON_VERSION:STRING=
@@ -330,11 +342,41 @@ _file_name:FILEPATH=/home/pi/airdrop_ros/src/rosbridge_suite/rosbridge_library/t
 //Path to a file.
 _path_name:FILEPATH=/home/pi/airdrop_ros/src/diagnostics/diagnostic_analysis/test/bag_csv_test.py
 
+//Path to a library.
+bcmhost_LIBS:FILEPATH=/opt/vc/lib/libbcm_host.so
+
 //The directory containing a CMake configuration file for bond.
 bond_DIR:PATH=/opt/ros/kinetic/share/bond/cmake
 
 //The directory containing a CMake configuration file for bondcpp.
 bondcpp_DIR:PATH=/opt/ros/kinetic/share/bondcpp/cmake
+
+//Value Computed by CMake
+camera_calibration_parsers_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/image_common/camera_calibration_parsers
+
+//The directory containing a CMake configuration file for camera_calibration_parsers.
+camera_calibration_parsers_DIR:PATH=/home/pi/airdrop_ros/devel/share/camera_calibration_parsers/cmake
+
+//Dependencies for the target
+camera_calibration_parsers_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;general;yaml-cpp;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;
+
+//Value Computed by CMake
+camera_calibration_parsers_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/image_common/camera_calibration_parsers
+
+//Dependencies for the target
+camera_calibration_parsers_wrapper_LIB_DEPENDS:STATIC=general;camera_calibration_parsers;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_python.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;
+
+//Value Computed by CMake
+camera_info_manager_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/image_common/camera_info_manager
+
+//The directory containing a CMake configuration file for camera_info_manager.
+camera_info_manager_DIR:PATH=/home/pi/airdrop_ros/devel/share/camera_info_manager/cmake
+
+//Dependencies for the target
+camera_info_manager_LIB_DEPENDS:STATIC=general;camera_calibration_parsers;general;image_transport;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/arm-linux-gnueabihf/libdl.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;
+
+//Value Computed by CMake
+camera_info_manager_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/image_common/camera_info_manager
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
@@ -351,11 +393,23 @@ class_loader_DIR:PATH=/opt/ros/kinetic/share/class_loader/cmake
 //Value Computed by CMake
 compressed_depth_image_transport_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/image_transport_plugins/compressed_depth_image_transport
 
+//Dependencies for the target
+compressed_depth_image_transport_LIB_DEPENDS:STATIC=general;cv_bridge;general;/usr/local/lib/libopencv_core.so.3.3.0;general;/usr/local/lib/libopencv_imgproc.so.3.3.0;general;/usr/local/lib/libopencv_imgcodecs.so.3.3.0;general;/opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;image_transport;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/arm-linux-gnueabihf/libdl.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_img_hash;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;
+
 //Value Computed by CMake
 compressed_depth_image_transport_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/image_transport_plugins/compressed_depth_image_transport
 
+//Value Computed by CMake
+compressed_image_transport_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/image_transport_plugins/compressed_image_transport
+
 //The directory containing a CMake configuration file for compressed_image_transport.
-compressed_image_transport_DIR:PATH=compressed_image_transport_DIR-NOTFOUND
+compressed_image_transport_DIR:PATH=/home/pi/airdrop_ros/devel/share/compressed_image_transport/cmake
+
+//Dependencies for the target
+compressed_image_transport_LIB_DEPENDS:STATIC=general;cv_bridge;general;/usr/local/lib/libopencv_core.so.3.3.0;general;/usr/local/lib/libopencv_imgproc.so.3.3.0;general;/usr/local/lib/libopencv_imgcodecs.so.3.3.0;general;/opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;image_transport;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/arm-linux-gnueabihf/libdl.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_img_hash;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;
+
+//Value Computed by CMake
+compressed_image_transport_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/image_transport_plugins/compressed_image_transport
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
@@ -364,10 +418,16 @@ cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 cv_bridge_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/vision_opencv/cv_bridge
 
 //The directory containing a CMake configuration file for cv_bridge.
-cv_bridge_DIR:PATH=cv_bridge_DIR-NOTFOUND
+cv_bridge_DIR:PATH=/home/pi/airdrop_ros/devel/share/cv_bridge/cmake
+
+//Dependencies for the target
+cv_bridge_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;opencv_imgcodecs;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;
 
 //Value Computed by CMake
 cv_bridge_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/vision_opencv/cv_bridge
+
+//Dependencies for the target
+cv_bridge_boost_LIB_DEPENDS:STATIC=general;/usr/lib/arm-linux-gnueabihf/libboost_python.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;general;cv_bridge;
 
 //Value Computed by CMake
 diagnostic_aggregator_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/diagnostics/diagnostic_aggregator
@@ -411,6 +471,9 @@ diagnostics_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/diagnostics/diagnostics
 //Value Computed by CMake
 diagnostics_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/diagnostics/diagnostics
 
+//The directory containing a CMake configuration file for dynamic_reconfigure.
+dynamic_reconfigure_DIR:PATH=/opt/ros/kinetic/share/dynamic_reconfigure/cmake
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
 
@@ -439,13 +502,46 @@ gps_node_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/gps_node
 gps_node_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/gps_node
 
 //Value Computed by CMake
+image_common_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/image_common/image_common
+
+//Value Computed by CMake
+image_common_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/image_common/image_common
+
+//Value Computed by CMake
+image_geometry_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/vision_opencv/image_geometry
+
+//Dependencies for the target
+image_geometry_LIB_DEPENDS:STATIC=general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_img_hash;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;
+
+//Value Computed by CMake
+image_geometry_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/vision_opencv/image_geometry
+
+//Value Computed by CMake
+image_transport_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/image_common/image_transport
+
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/home/pi/airdrop_ros/devel/share/image_transport/cmake
+
+//Dependencies for the target
+image_transport_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/arm-linux-gnueabihf/libdl.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;
+
+//Value Computed by CMake
+image_transport_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/image_common/image_transport
+
+//Value Computed by CMake
 image_transport_plugins_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/image_transport_plugins/image_transport_plugins
+
+//Dependencies for the target
+image_transport_plugins_LIB_DEPENDS:STATIC=general;image_transport;
 
 //Value Computed by CMake
 image_transport_plugins_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/image_transport_plugins/image_transport_plugins
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/kinetic/lib/librostime.so
+
+//The directory containing a CMake configuration file for message_filters.
+message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
 
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
@@ -462,6 +558,18 @@ mission_node_DIR:PATH=/home/pi/airdrop_ros/devel/share/mission_node/cmake
 //Value Computed by CMake
 mission_node_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/mission_node
 
+//Path to a library.
+mmal_LIBS:FILEPATH=/opt/vc/lib/libmmal.so
+
+//Path to a library.
+mmalcore_LIBS:FILEPATH=/opt/vc/lib/libmmal_core.so
+
+//Path to a library.
+mmalutil_LIBS:FILEPATH=/opt/vc/lib/libmmal_util.so
+
+//Path to a library.
+mmalvcclient_LIBS:FILEPATH=/opt/vc/lib/libmmal_vc_client.so
+
 //Value Computed by CMake
 opencv_tests_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/vision_opencv/opencv_tests
 
@@ -470,6 +578,15 @@ opencv_tests_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/vision_opencv/opencv_tes
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
+
+//Value Computed by CMake
+polled_camera_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/image_common/polled_camera
+
+//Dependencies for the target
+polled_camera_LIB_DEPENDS:STATIC=general;image_transport;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/arm-linux-gnueabihf/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;general;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;
+
+//Value Computed by CMake
+polled_camera_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/image_common/polled_camera
 
 //Value Computed by CMake
 raspicam_node_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/raspicam_node
@@ -585,8 +702,20 @@ test_diagnostic_aggregator_LIB_DEPENDS:STATIC=general;diagnostic_aggregator;gene
 //Value Computed by CMake
 test_diagnostic_aggregator_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/diagnostics/test_diagnostic_aggregator
 
+//Value Computed by CMake
+theora_image_transport_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/image_transport_plugins/theora_image_transport
+
+//Value Computed by CMake
+theora_image_transport_SOURCE_DIR:STATIC=/home/pi/airdrop_ros/src/image_transport_plugins/theora_image_transport
+
 //The directory containing a CMake configuration file for topic_tools.
 topic_tools_DIR:PATH=/opt/ros/kinetic/share/topic_tools/cmake
+
+//Path to a library.
+vchostif_LIBS:FILEPATH=/opt/vc/lib/libvchostif.a
+
+//Path to a library.
+vcos_LIBS:FILEPATH=/opt/vc/lib/libvcos.so
 
 //Value Computed by CMake
 vision_opencv_BINARY_DIR:STATIC=/home/pi/airdrop_ros/build/vision_opencv/vision_opencv
@@ -616,6 +745,10 @@ Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_DIR
 Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_DEBUG
+Boost_FILESYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_RELEASE
+Boost_FILESYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_INCLUDE_DIR
 Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_LIBRARY_DIR_DEBUG
@@ -770,10 +903,14 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v3.3.0()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.13()]
 //Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/arm-linux-gnueabihf/libpython2.7.so][/usr/include/python2.7][v2.7.13()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/arm-linux-gnueabihf/libpython2.7.so][/usr/include/python2.7][v2.7.13(2.7)]
 GTEST_BOTH_LIBRARIES:INTERNAL=/opt/ros/indigo/lib/libgtest.so;/opt/ros/indigo/lib/libgtest_main.so
 GTEST_FOUND:INTERNAL=TRUE
 //ADVANCED property for variable: GTEST_INCLUDE_DIR
@@ -789,6 +926,8 @@ GTEST_MAIN_LIBRARIES:INTERNAL=/opt/ros/indigo/lib/libgtest_main.so
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+LD_ACCEPTS_VERSION_SCRIPT:INTERNAL=TRUE
 //ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_DBG
 OpenCV_3RDPARTY_LIB_DIR_DBG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_OPT
@@ -799,6 +938,66 @@ OpenCV_CONFIG_PATH-ADVANCED:INTERNAL=1
 OpenCV_LIB_DIR_DBG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_LIB_DIR_OPT
 OpenCV_LIB_DIR_OPT-ADVANCED:INTERNAL=1
+PC_OGG_CFLAGS:INTERNAL=-I/usr/local/include
+PC_OGG_CFLAGS_I:INTERNAL=
+PC_OGG_CFLAGS_OTHER:INTERNAL=
+PC_OGG_FOUND:INTERNAL=1
+PC_OGG_INCLUDEDIR:INTERNAL=/usr/local/include
+PC_OGG_INCLUDE_DIRS:INTERNAL=/usr/local/include
+PC_OGG_LDFLAGS:INTERNAL=-L/usr/local/lib;-logg
+PC_OGG_LDFLAGS_OTHER:INTERNAL=
+PC_OGG_LIBDIR:INTERNAL=/usr/local/lib
+PC_OGG_LIBRARIES:INTERNAL=ogg
+PC_OGG_LIBRARY_DIRS:INTERNAL=/usr/local/lib
+PC_OGG_LIBS:INTERNAL=
+PC_OGG_LIBS_L:INTERNAL=
+PC_OGG_LIBS_OTHER:INTERNAL=
+PC_OGG_LIBS_PATHS:INTERNAL=
+PC_OGG_PREFIX:INTERNAL=/usr/local
+PC_OGG_STATIC_CFLAGS:INTERNAL=-I/usr/local/include
+PC_OGG_STATIC_CFLAGS_I:INTERNAL=
+PC_OGG_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_OGG_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/include
+PC_OGG_STATIC_LDFLAGS:INTERNAL=-L/usr/local/lib;-logg
+PC_OGG_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_OGG_STATIC_LIBDIR:INTERNAL=
+PC_OGG_STATIC_LIBRARIES:INTERNAL=ogg
+PC_OGG_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/lib
+PC_OGG_STATIC_LIBS:INTERNAL=
+PC_OGG_STATIC_LIBS_L:INTERNAL=
+PC_OGG_STATIC_LIBS_OTHER:INTERNAL=
+PC_OGG_STATIC_LIBS_PATHS:INTERNAL=
+PC_OGG_VERSION:INTERNAL=1.3.1
+PC_OGG_ogg_INCLUDEDIR:INTERNAL=
+PC_OGG_ogg_LIBDIR:INTERNAL=
+PC_OGG_ogg_PREFIX:INTERNAL=
+PC_OGG_ogg_VERSION:INTERNAL=
+PC_THEORA_CFLAGS:INTERNAL=
+PC_THEORA_CFLAGS_I:INTERNAL=
+PC_THEORA_CFLAGS_OTHER:INTERNAL=
+PC_THEORA_FOUND:INTERNAL=
+PC_THEORA_INCLUDEDIR:INTERNAL=
+PC_THEORA_LIBDIR:INTERNAL=
+PC_THEORA_LIBS:INTERNAL=
+PC_THEORA_LIBS_L:INTERNAL=
+PC_THEORA_LIBS_OTHER:INTERNAL=
+PC_THEORA_LIBS_PATHS:INTERNAL=
+PC_THEORA_PREFIX:INTERNAL=
+PC_THEORA_STATIC_CFLAGS:INTERNAL=
+PC_THEORA_STATIC_CFLAGS_I:INTERNAL=
+PC_THEORA_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_THEORA_STATIC_LIBDIR:INTERNAL=
+PC_THEORA_STATIC_LIBS:INTERNAL=
+PC_THEORA_STATIC_LIBS_L:INTERNAL=
+PC_THEORA_STATIC_LIBS_OTHER:INTERNAL=
+PC_THEORA_STATIC_LIBS_PATHS:INTERNAL=
+PC_THEORA_VERSION:INTERNAL=
+PC_THEORA_theora_INCLUDEDIR:INTERNAL=
+PC_THEORA_theora_LIBDIR:INTERNAL=
+PC_THEORA_theora_PREFIX:INTERNAL=
+PC_THEORA_theora_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_INCLUDE_DIR
@@ -811,8 +1010,42 @@ PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
 PYTHON_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
 PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+YAML_CPP_CFLAGS:INTERNAL=
+YAML_CPP_CFLAGS_I:INTERNAL=
+YAML_CPP_CFLAGS_OTHER:INTERNAL=
+YAML_CPP_FOUND:INTERNAL=1
+YAML_CPP_INCLUDEDIR:INTERNAL=/usr/include
+YAML_CPP_INCLUDE_DIRS:INTERNAL=
+YAML_CPP_LDFLAGS:INTERNAL=-lyaml-cpp
+YAML_CPP_LDFLAGS_OTHER:INTERNAL=
+YAML_CPP_LIBDIR:INTERNAL=
+YAML_CPP_LIBRARIES:INTERNAL=yaml-cpp
+YAML_CPP_LIBRARY_DIRS:INTERNAL=
+YAML_CPP_LIBS:INTERNAL=
+YAML_CPP_LIBS_L:INTERNAL=
+YAML_CPP_LIBS_OTHER:INTERNAL=
+YAML_CPP_LIBS_PATHS:INTERNAL=
+YAML_CPP_PREFIX:INTERNAL=/usr
+YAML_CPP_STATIC_CFLAGS:INTERNAL=
+YAML_CPP_STATIC_CFLAGS_I:INTERNAL=
+YAML_CPP_STATIC_CFLAGS_OTHER:INTERNAL=
+YAML_CPP_STATIC_INCLUDE_DIRS:INTERNAL=
+YAML_CPP_STATIC_LDFLAGS:INTERNAL=-lyaml-cpp
+YAML_CPP_STATIC_LDFLAGS_OTHER:INTERNAL=
+YAML_CPP_STATIC_LIBDIR:INTERNAL=
+YAML_CPP_STATIC_LIBRARIES:INTERNAL=yaml-cpp
+YAML_CPP_STATIC_LIBRARY_DIRS:INTERNAL=
+YAML_CPP_STATIC_LIBS:INTERNAL=
+YAML_CPP_STATIC_LIBS_L:INTERNAL=
+YAML_CPP_STATIC_LIBS_OTHER:INTERNAL=
+YAML_CPP_STATIC_LIBS_PATHS:INTERNAL=
+YAML_CPP_VERSION:INTERNAL=0.5.2
+YAML_CPP_yaml-cpp_INCLUDEDIR:INTERNAL=
+YAML_CPP_yaml-cpp_LIBDIR:INTERNAL=
+YAML_CPP_yaml-cpp_PREFIX:INTERNAL=
+YAML_CPP_yaml-cpp_VERSION:INTERNAL=
 //Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=atomic;chrono;date_time;python;system;thread
+_Boost_COMPONENTS_SEARCHED:INTERNAL=atomic;chrono;date_time;filesystem;python;system;thread
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
 //Last used Boost_LIBRARY_DIR_DEBUG value.
@@ -823,4 +1056,7 @@ _Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/arm-linux-gnueabihf
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+__pkg_config_checked_PC_OGG:INTERNAL=1
+__pkg_config_checked_YAML_CPP:INTERNAL=1
+prefix_result:INTERNAL=/usr/local/lib
 
