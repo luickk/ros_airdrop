@@ -174,7 +174,7 @@ bool a_operation_landing(cc_node::a_operation_landing::Request  &req,
   if(req.a_operation_landing_reason != "" && airborne && !in_mission && !landing_phase)
   {
     in_mission = true;
-    naza_a.landing_phase(cf, pca9685, naza_m);
+    naza_a.auto_landing(cf, pca9685, naza_m);
     landing_phase=true;
     airborne = false;
     res.a_operation_status = 7;
@@ -194,11 +194,11 @@ bool a_operation_liftoff(cc_node::a_operation_liftoff::Request  &req,
     if(set_take_off_pos_local()){
       in_mission = true;
       naza_m.arm_motors(cf, pca9685);
-      naza.fly_throttle(cf, pca9685, 50);
+      naza_m.fly_throttle(cf, pca9685, 50);
       sleep(5);
-      naza.fly_throttle(cf, pca9685, 60);
+      naza_m.fly_throttle(cf, pca9685, 60);
       sleep(3);
-      auto_hover(cf, pca9685, naza);
+      naza_a.auto_hover(cf, pca9685, naza_m);
       in_mission = false;
       airborne = true;
       res.a_operation_status = 7;

@@ -1,4 +1,5 @@
 # Hashes of file build rules.
+6f82f7b5c9fd504abe4c2a7cdde4ff1f /home/pi/airdrop_ros/devel/include/battery_node/bat_stat.h
 a461c6e15a74b6de596d56a2a0852d60 /home/pi/airdrop_ros/devel/include/cc_node/a_operation_fly_to_pos.h
 daba5bca8829a7a579feccd5a6a6e374 /home/pi/airdrop_ros/devel/include/cc_node/a_operation_landing.h
 56a1285b8aeb8122121a5166cdc32f67 /home/pi/airdrop_ros/devel/include/cc_node/a_operation_liftoff.h
@@ -54,6 +55,8 @@ e9568da44cd3b100793e12b233e6f4c4 /home/pi/airdrop_ros/devel/include/rosbridge_li
 ad6958bcdc32a9756cc8f320e8b94654 /home/pi/airdrop_ros/devel/include/rosbridge_library/TestTimeArray.h
 eeb4844a878cf114a82f701795ef3e51 /home/pi/airdrop_ros/devel/include/rosbridge_library/TestUInt8.h
 489029e293cd368f3af49087781ddeae /home/pi/airdrop_ros/devel/include/rosbridge_library/TestUInt8FixedSizeArray16.h
+83d8f5b6169def9ef21d99abdfe0aabd /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/battery_node/msg/__init__.py
+6bb4422fe85bb510a5b37cbb142f3c1b /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/battery_node/msg/_bat_stat.py
 91a287cea10a22661cfa5c7a5835f964 /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/cc_node/srv/__init__.py
 df312c67bbf0df6dfbb34e05d0d92711 /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/cc_node/srv/_a_operation_fly_to_pos.py
 c0b9af32d76e8d90f22b9077a4b07c9b /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/cc_node/srv/_a_operation_landing.py
@@ -117,6 +120,7 @@ f2bc282c67d1bc94ce5c10dbfa02a1c9 /home/pi/airdrop_ros/devel/lib/python2.7/dist-p
 0ef6e741d1420c670d2da2271128bf47 /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/rosbridge_library/srv/_TestRequestOnly.py
 cb85eff6ea05fdaf0bdb09b3502a62a9 /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/rosbridge_library/srv/_TestResponseOnly.py
 806e4c844cc7d83aac7bbb40d69e22ab /home/pi/airdrop_ros/devel/lib/python2.7/dist-packages/rosbridge_library/srv/__init__.py
+0a5d918b9649cb588cec425d3612fdbf /home/pi/airdrop_ros/devel/share/common-lisp/ros/battery_node/msg/bat_stat.lisp
 6f2e7f6d0343282adfba1335d68177ad /home/pi/airdrop_ros/devel/share/common-lisp/ros/cc_node/srv/a_operation_fly_to_pos.lisp
 8bb3e33629ffc6301e17df4530eaf339 /home/pi/airdrop_ros/devel/share/common-lisp/ros/cc_node/srv/a_operation_landing.lisp
 8a5a3a88158bd1931097d30dd4ad733d /home/pi/airdrop_ros/devel/share/common-lisp/ros/cc_node/srv/a_operation_liftoff.lisp
@@ -172,6 +176,7 @@ d8a689f3b4b5ac27bfdb54bf5c8b4202 /home/pi/airdrop_ros/devel/share/common-lisp/ro
 88b83440f0990041f97d1fade1bb18de /home/pi/airdrop_ros/devel/share/common-lisp/ros/rosbridge_library/srv/TestRequestAndResponse.lisp
 df5193f6497f60e03e968d312a839717 /home/pi/airdrop_ros/devel/share/common-lisp/ros/rosbridge_library/srv/TestRequestOnly.lisp
 cb2f3048f1eae2956203784f8f4e6ac7 /home/pi/airdrop_ros/devel/share/common-lisp/ros/rosbridge_library/srv/TestResponseOnly.lisp
+8d41437a0f36ef67b3920fe36618e9a5 /home/pi/airdrop_ros/devel/share/gennodejs/ros/battery_node/msg/bat_stat.js
 91d1aa3c937f618fb11146a663463d9c /home/pi/airdrop_ros/devel/share/gennodejs/ros/cc_node/srv/a_operation_fly_to_pos.js
 443924610f7cca0c6007074716ad2f67 /home/pi/airdrop_ros/devel/share/gennodejs/ros/cc_node/srv/a_operation_landing.js
 793751caf6c60aa1abd7d3e37a7c01af /home/pi/airdrop_ros/devel/share/gennodejs/ros/cc_node/srv/a_operation_liftoff.js
@@ -227,6 +232,8 @@ e31f9bc38a5aae5b5db572634073da38 /home/pi/airdrop_ros/devel/share/gennodejs/ros/
 66cceaf306bed4038838f364fb1a1f16 /home/pi/airdrop_ros/devel/share/gennodejs/ros/rosbridge_library/srv/TestRequestAndResponse.js
 88ca798ce06fb10531759e850d1ce387 /home/pi/airdrop_ros/devel/share/gennodejs/ros/rosbridge_library/srv/TestRequestOnly.js
 0824ef22250e6fa9a5334cf029162ae6 /home/pi/airdrop_ros/devel/share/gennodejs/ros/rosbridge_library/srv/TestResponseOnly.js
+bab704cb1b1c0e04910e30d293dbd699 /home/pi/airdrop_ros/devel/share/roseus/ros/battery_node/manifest.l
+0742562e9dd7cc68730365fd22fd15d5 /home/pi/airdrop_ros/devel/share/roseus/ros/battery_node/msg/bat_stat.l
 b8769e6a4c64918ec73b72f7e16486cd /home/pi/airdrop_ros/devel/share/roseus/ros/cc_node/manifest.l
 dad6010033d593517fff287d76c7052a /home/pi/airdrop_ros/devel/share/roseus/ros/cc_node/srv/a_operation_fly_to_pos.l
 da4e15c8c98eaf87ffed0abeff0d3ed3 /home/pi/airdrop_ros/devel/share/roseus/ros/cc_node/srv/a_operation_landing.l
@@ -289,6 +296,12 @@ eb9f728c32bcb3803be3c87db930635e /home/pi/airdrop_ros/devel/share/roseus/ros/ros
 22ce04e54287f9b0346c428961caef6d /home/pi/airdrop_ros/devel/share/roseus/ros/rosbridge_library/srv/TestRequestOnly.l
 ab21905370f332a1b692b03ef2ba67ca /home/pi/airdrop_ros/devel/share/roseus/ros/rosbridge_library/srv/TestResponseOnly.l
 acfb53001b4399542c145229adf74a03 CMakeFiles/clean_test_results
+9e569a8a13f4dc7fde4a1be74c720cdb battery_node/CMakeFiles/_battery_node_generate_messages_check_deps_bat_stat
+443b8ccc4a81b04536e60864816c5d80 battery_node/CMakeFiles/battery_node_generate_messages_cpp
+443b8ccc4a81b04536e60864816c5d80 battery_node/CMakeFiles/battery_node_generate_messages_eus
+443b8ccc4a81b04536e60864816c5d80 battery_node/CMakeFiles/battery_node_generate_messages_lisp
+443b8ccc4a81b04536e60864816c5d80 battery_node/CMakeFiles/battery_node_generate_messages_nodejs
+443b8ccc4a81b04536e60864816c5d80 battery_node/CMakeFiles/battery_node_generate_messages_py
 a0a395dbdeb08c450fbb075babe1177f cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos
 d77b90316712534aa5286d9867713830 cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing
 8479852647c458725d3b3f9836d98f51 cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff

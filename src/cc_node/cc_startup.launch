@@ -1,6 +1,7 @@
 <launch>
   <node name="cc" pkg="cc_node" type="cc" output="screen"/>
-  <node name="talker" pkg="gps_node" type="talker" output="screen"/>
+  <node name="talker_gps" pkg="gps_node" type="talker" output="screen"/>
+  <node name="talker_bat" pkg="battery_node" type="talker_bat" output="screen"/>
   <node name="mn" pkg="mission_node" type="mn" output="screen"/>
   <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" >
      <arg name="port" value="9090"/>
