@@ -148,6 +148,16 @@ bool set_take_off_pos_local()
 }
 
 /*
+  Local function to read gps location
+*/
+gps_node::gps_raw get_latest_gps_data()
+{
+  gps_node::gps_raw latest_gps_data = *ros::topic::waitForMessage<gps_node::gps_raw>("/gps_raw", ros::Duration(10));
+
+  return latest_gps_data;
+}
+
+/*
   Autonomous operations service
 */
 bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
@@ -156,7 +166,27 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
   if(req.pos_lat != 0 && req.pos_lon != 0 && req.pos_alt != 0 && airborne && !in_mission && !landing_phase)
   {
     in_mission = true;
-    naza_a.fly_to_gps_pos(cf, pca9685, naza_m, req.pos_lat, req.pos_lon, req.pos_alt);
+    gps_node::gps_raw latest_gps_data = get_latest_gps_data();
+    // calc heading
+    float londif, head, lon1, lon2, lat1, lat2, finalans, finalans2, final_heading;
+    lat1=(req.pos_lat*3.14159)/180;
+    lon1=(req.pos_lon*3.14159)/180;
+    lat2=(latest_gps_data.lat*3.14159)/180;
+    lon2=(latest_gps_data.lon*3.14159)/180;
+    londif=lon2-lon1;
+
+    head=atan2((sin(londif)*cos(lat2)),((cos(lat1)*sin(lat2))-(sin(lat1)*cos(lat2)*cos(londif)))) ;
+    finalans=(head*180)/3.14159;
+    finalans2=0;
+    if(finalans<=0)
+    {
+        finalans2=finalans+360;
+        final_heading= finalans2;
+    } else {
+        final_heading= finalans;
+    }
+    // done calc heading
+    ROS_INFO("HEADING: %f", final_heading);
     in_mission = false;
     res.a_operation_status = 7;
   } else if (!airborne){
@@ -164,7 +194,6 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
   } else if (in_mission || !landing_phase){
     res.a_operation_status = 8;
   }
-  ROS_INFO("fly to pos(lat,lon): %ld, %ld", req.pos_lat, req.pos_lon);
   return true;
 }
 

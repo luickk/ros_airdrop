@@ -41,6 +41,13 @@ bool is_number(const string& s)
     return !s.empty() && find_if(s.begin(),
         s.end(), [](char c) { return !isdigit(c); }) == s.end();
 }
+bool is_float(string myString) {
+    std::istringstream iss(myString);
+    float f;
+    iss >> noskipws >> f; // noskipws considers leading whitespace invalid
+    // Check the entire string was consumed and if either failbit or badbit is set
+    return iss.eof() && !iss.fail();
+}
 
 bool fexists(string filename) {
   std::ifstream ifile(filename);
@@ -92,6 +99,7 @@ bool start_mission(mission_node::start_mission::Request  &req,
         while(getline(file_open, file_line))
         {
           vector<string> split_by_space = split(file_line, ' ');
+
           if(split_by_space[0] == "takeoff")
           {
             if(split_by_space.size() == 2 && is_number(split_by_space[1]))
@@ -137,11 +145,17 @@ bool start_mission(mission_node::start_mission::Request  &req,
               break;
             }
           } else if(split_by_space[0] == "flyto"){
-            if(split_by_space.size() == 4 && is_number(split_by_space[1]) && is_number(split_by_space[2]) && is_number(split_by_space[3]))
+            float lat, lon;
+            int alt;
+            if(split_by_space.size() == 4 && is_float(split_by_space[1]) && is_float(split_by_space[2]) && is_number(split_by_space[3]))
             {
-              a_operation_fly_to_pos.request.pos_lat = atoi(split_by_space[1].c_str());
-              a_operation_fly_to_pos.request.pos_lon = atoi(split_by_space[2].c_str());
-              a_operation_fly_to_pos.request.pos_alt = atoi(split_by_space[3].c_str());
+              lat= atof(split_by_space[1].c_str());
+              lon= atof(split_by_space[2].c_str());
+              alt= atoi(split_by_space[3].c_str());
+              printf("%f, %f, %i\n", lat, lon, alt);
+              a_operation_fly_to_pos.request.pos_lat = lat;
+              a_operation_fly_to_pos.request.pos_lon = lon;
+              a_operation_fly_to_pos.request.pos_alt = alt;
               if (cl_a_operation_fly_to_pos.call(a_operation_fly_to_pos))
               {
                 res.mission_status = 17;
