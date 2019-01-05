@@ -152,7 +152,6 @@ bool start_mission(mission_node::start_mission::Request  &req,
               lat= atof(split_by_space[1].c_str());
               lon= atof(split_by_space[2].c_str());
               alt= atoi(split_by_space[3].c_str());
-              printf("%f, %f, %i\n", lat, lon, alt);
               a_operation_fly_to_pos.request.pos_lat = lat;
               a_operation_fly_to_pos.request.pos_lon = lon;
               a_operation_fly_to_pos.request.pos_alt = alt;
@@ -165,7 +164,6 @@ bool start_mission(mission_node::start_mission::Request  &req,
                   res.mission_status = 16;
                   break;
                 }
-                ROS_INFO("FLYING TO POS  lat: %s, lon: %s, alt: %s", split_by_space[1].c_str(), split_by_space[2].c_str(), split_by_space[3].c_str());
               } else {
                 res.mission_status = 20;
                 break;

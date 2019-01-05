@@ -18,6 +18,9 @@
 #include <iostream>
 #include <sstream>
 #include <boost/asio.hpp>
+#include <math.h>
+#include <cmath>
+
 /*
   INITS
 */
@@ -131,6 +134,63 @@ bool manual_action(cc_node::manual_action::Request  &req,
   }
   return true;
 }
+// Utility function for
+// converting degrees to radians
+double toRadians(const double degree)
+{
+    // cmath library in C++
+    // defines the constant
+    // M_PI as the value of
+    // pi accurate to 1e-30
+    double one_deg = (M_PI) / 180;
+    return (one_deg * degree);
+}
+
+double distance(double lat1, double lon1, double lat2, double lon2) {
+
+	// Convert degrees to radians
+	lat1 = lat1 * M_PI / 180.0;
+	lon1 = lon1 * M_PI / 180.0;
+
+	lat2 = lat2 * M_PI / 180.0;
+	lon2 = lon2 * M_PI / 180.0;
+
+	// radius of earth in metres
+	double r = 6378100;
+
+	// P
+	double rho1 = r * cos(lat1);
+	double z1 = r * sin(lat1);
+	double x1 = rho1 * cos(lon1);
+	double y1 = rho1 * sin(lon1);
+
+	// Q
+	double rho2 = r * cos(lat2);
+	double z2 = r * sin(lat2);
+	double x2 = rho2 * cos(lon2);
+	double y2 = rho2 * sin(lon2);
+
+	// Dot product
+	double dot = (x1 * x2 + y1 * y2 + z1 * z2);
+	double cos_theta = dot / (r * r);
+
+	double theta = acos(cos_theta);
+
+	// Distance in Metres
+	return r * theta;
+}
+// Returns true if x is in range [low..high], else false
+bool in_Range(unsigned low, unsigned high, unsigned x)
+{
+    return  ((x-low) <= (high-low));
+}
+double _ftod(float fValue)
+{
+    char czDummy[30];
+    sprintf(czDummy,"%9.5f",fValue);
+    double dValue = strtod(czDummy,NULL);
+    return dValue;
+}
 
 /*
   Local copy of get_set_take_off_pos service, for usage in service callbacks
@@ -168,25 +228,59 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
     in_mission = true;
     gps_node::gps_raw latest_gps_data = get_latest_gps_data();
     // calc heading
+    float begin_lat1, begin_lon1, begin_lat2, begin_lon2;
+    begin_lat1 = 49.466603;
+    begin_lon1 = 10.967978;
+    begin_lat2 = req.pos_lat;
+    begin_lon2 = req.pos_lon;
     float londif, head, lon1, lon2, lat1, lat2, finalans, finalans2, final_heading;
-    lat1=(req.pos_lat*3.14159)/180;
-    lon1=(req.pos_lon*3.14159)/180;
-    lat2=(latest_gps_data.lat*3.14159)/180;
-    lon2=(latest_gps_data.lon*3.14159)/180;
+    lat2=(begin_lat2*3.14159)/180;
+    lon2=(begin_lon2*3.14159)/180;
+    lat1=(begin_lat1*3.14159)/180;
+    lon1=(begin_lon1*3.14159)/180;
     londif=lon2-lon1;
+    ROS_INFO("FLYING TO POS  lat: %f, lon: %f FROM lat: %f lon: %f", req.pos_lat, req.pos_lon, begin_lat1, begin_lon1);
 
     head=atan2((sin(londif)*cos(lat2)),((cos(lat1)*sin(lat2))-(sin(lat1)*cos(lat2)*cos(londif)))) ;
     finalans=(head*180)/3.14159;
     finalans2=0;
     if(finalans<=0)
     {
-        finalans2=finalans+360;
-        final_heading= finalans2;
+      finalans2=finalans+360;
+      final_heading= finalans2;
     } else {
-        final_heading= finalans;
+      final_heading= finalans;
     }
     // done calc heading
-    ROS_INFO("HEADING: %f", final_heading);
+    ROS_INFO("Calc Heading: %f",final_heading);
+    gps_node::gps_raw latest_gps_data_sync;
+
+    naza_m.fly_turn_right(cf, pca9685, 20);
+    while(1){
+      latest_gps_data_sync = get_latest_gps_data();
+      if(in_Range(final_heading-10,final_heading+10, latest_gps_data_sync.heading)){
+        naza_m.fly_turn_right(cf, pca9685, 0);
+        break;
+      }
+    }
+
+    double distance_to_dest;
+    distance_to_dest = distance(_ftod(latest_gps_data_sync.lat), _ftod(latest_gps_data_sync.lon), _ftod(begin_lat2), _ftod(begin_lon2));
+    ROS_INFO("Calc Dist: %lf",distance_to_dest);
+    naza_m.fly_forward(cf, pca9685,20);
+    while(1){
+      latest_gps_data_sync = get_latest_gps_data();
+      distance_to_dest = distance(_ftod(latest_gps_data_sync.lat), _ftod(latest_gps_data_sync.lon), _ftod(begin_lat2), _ftod(begin_lon2));
+      if(distance_to_dest < 20){
+        naza_m.fly_forward(cf, pca9685,0);
+        break;
+      }
+      /// DEMO
+      naza_m.fly_forward(cf, pca9685,0);
+      break;
+      ///
+    }
+
     in_mission = false;
     res.a_operation_status = 7;
   } else if (!airborne){
@@ -262,8 +356,9 @@ bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Reque
 {
   if(req.a_operation_dir_in_deg != 0  && airborne)
   {
+    int live_heading = get_latest_gps_data().heading;
     in_mission = true;
-    naza_a.turn_to_deg(cf, pca9685, naza_m, req.a_operation_dir_in_deg);
+    naza_a.turn_to_deg(cf, pca9685, naza_m, req.a_operation_dir_in_deg, &live_heading);
     in_mission = false;
     res.a_operation_status = 7;
   } else if (!airborne){
