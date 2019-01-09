@@ -47,8 +47,12 @@ gps_node::gps_raw gps_raw_startup_pos;
   ROS DRONE PARAMETERS
 */
 
-// 0 only for testing purposes!
+// DEMO
 int home_point_sat_threshold = 0;
+
+/*
+  DEMO: only for testing purposes
+*/
 
 /*
   Manual actions service
@@ -294,13 +298,17 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
 bool a_operation_landing(cc_node::a_operation_landing::Request  &req,
                   cc_node::a_operation_landing::Response &res)
 {
-  if(req.a_operation_landing_reason != "" && airborne && !in_mission && !landing_phase)
+  if(airborne && !in_mission && !landing_phase)
   {
     in_mission = true;
     naza_a.auto_landing(cf, pca9685, naza_m);
     landing_phase=true;
+    // DEMO
     airborne = false;
+    in_mission = false;
+    landing_phase = false;
     res.a_operation_status = 7;
+    ROS_INFO("LANDING");
   } else if (!airborne){
     res.a_operation_status = 11;
   } else if (in_mission || !landing_phase){
@@ -325,6 +333,7 @@ bool a_operation_liftoff(cc_node::a_operation_liftoff::Request  &req,
       in_mission = false;
       airborne = true;
       res.a_operation_status = 7;
+      ROS_INFO("TOOK OFF TO HEIGHT  %i", req.a_operation_takeoff_height);
     } else {
       res.a_operation_status = 21;
     }
@@ -345,6 +354,7 @@ bool a_operation_stop_action_and_hover(cc_node::a_operation_stop_action_and_hove
     naza_a.auto_hover(cf, pca9685, naza_m);
     in_mission = false;
     res.a_operation_status = 7;
+    ROS_INFO("HOVERING");
   } else if (!airborne){
     res.a_operation_status = 11;
   }
@@ -361,6 +371,7 @@ bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Reque
     naza_a.turn_to_deg(cf, pca9685, naza_m, req.a_operation_dir_in_deg, &live_heading);
     in_mission = false;
     res.a_operation_status = 7;
+    ROS_INFO("TURN TO  %i", req.a_operation_dir_in_deg);
   } else if (!airborne){
     res.a_operation_status = 11;
   }

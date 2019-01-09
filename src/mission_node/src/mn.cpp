@@ -114,7 +114,6 @@ bool start_mission(mission_node::start_mission::Request  &req,
                   res.mission_status = 16;
                   break;
                 }
-                ROS_INFO("TOOK OFF TO HEIGHT  %s", split_by_space[1].c_str());
               } else {
                 res.mission_status = 20;
                 break;
@@ -135,7 +134,6 @@ bool start_mission(mission_node::start_mission::Request  &req,
                   res.mission_status = 16;
                   break;
                 }
-                ROS_INFO("LANDING");
               } else {
                 res.mission_status = 20;
                 break;
@@ -186,7 +184,6 @@ bool start_mission(mission_node::start_mission::Request  &req,
                   res.mission_status = 16;
                   break;
                 }
-                ROS_INFO("TURN TO  %s", split_by_space[1].c_str());
               } else {
                 res.mission_status = 20;
                 break;
@@ -207,7 +204,6 @@ bool start_mission(mission_node::start_mission::Request  &req,
                   res.mission_status = 16;
                   break;
                 }
-                ROS_INFO("HOVERING");
               } else {
                 res.mission_status = 20;
                 break;
