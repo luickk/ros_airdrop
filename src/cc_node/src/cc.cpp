@@ -55,11 +55,6 @@ gps_node::gps_raw gps_raw_startup_pos;
 
 
 int home_point_sat_threshold;
-if (debug){
-  home_point_sat_threshold = 0;
-} else {
-  home_point_sat_threshold = 8;
-}
 
 
 /*
@@ -431,6 +426,12 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "Command and Control Node");
   ros::NodeHandle n;
   pca9685.SetFrequency(50);
+  
+  if (debug){
+    home_point_sat_threshold = 0;
+  } else {
+    home_point_sat_threshold = 8;
+  }
 
   ros::ServiceServer service = n.advertiseService("manual_action", manual_action);
 
