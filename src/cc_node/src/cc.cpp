@@ -41,19 +41,35 @@ bool airborne=false;
 bool in_mission=false;
 bool landing_phase=false;
 
+/*
+  DEMO: only for testing purposes
+*/
+bool debug = true;
+
 gps_node::gps_raw gps_raw_startup_pos;
 
 /*
   ROS DRONE PARAMETERS
 */
 
-// DEMO
-int home_point_sat_threshold = 0;
+
+
+int home_point_sat_threshold;
+if (debug){
+  home_point_sat_threshold = 0;
+} else {
+  home_point_sat_threshold = 8;
+}
+
 
 /*
-  DEMO: only for testing purposes
+  Method to reset important states, debugging purposes only!
 */
-
+void reset_states(){
+  bool airborne=false;
+  bool in_mission=false;
+  bool landing_phase=false;
+}
 /*
   Manual actions service
 */
@@ -272,17 +288,22 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
     distance_to_dest = distance(_ftod(latest_gps_data_sync.lat), _ftod(latest_gps_data_sync.lon), _ftod(begin_lat2), _ftod(begin_lon2));
     ROS_INFO("Calc Dist: %lf",distance_to_dest);
     naza_m.fly_forward(cf, pca9685,20);
-    while(1){
+    while(1)
+      {
       latest_gps_data_sync = get_latest_gps_data();
       distance_to_dest = distance(_ftod(latest_gps_data_sync.lat), _ftod(latest_gps_data_sync.lon), _ftod(begin_lat2), _ftod(begin_lon2));
       if(distance_to_dest < 20){
         naza_m.fly_forward(cf, pca9685,0);
+        if (debug)
+        {
+        break;
+        }
+      }
+      if (debug)
+      {
+        naza_m.fly_forward(cf, pca9685,0);
         break;
       }
-      /// DEMO
-      naza_m.fly_forward(cf, pca9685,0);
-      break;
-      ///
     }
 
     in_mission = false;
@@ -303,10 +324,12 @@ bool a_operation_landing(cc_node::a_operation_landing::Request  &req,
     in_mission = true;
     naza_a.auto_landing(cf, pca9685, naza_m);
     landing_phase=true;
-    // DEMO
+    if (debug)
+    {
     airborne = false;
     in_mission = false;
     landing_phase = false;
+    }
     res.a_operation_status = 7;
     ROS_INFO("LANDING");
   } else if (!airborne){
