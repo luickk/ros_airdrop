@@ -273,8 +273,13 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
     naza_m.fly_turn_right(cf, pca9685, 20);
     while(1){
       latest_gps_data_sync = get_latest_gps_data();
-      if(in_Range(final_heading-10,final_heading+10, latest_gps_data_sync.heading)){
+      if(in_Range(final_heading-10,final_heading+10, latest_gps_data_sync.heading))
+      {
         naza_m.fly_turn_right(cf, pca9685, 0);
+        break;
+      }
+      if (debug)
+      {
         break;
       }
     }
@@ -284,14 +289,14 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
     ROS_INFO("Calc Dist: %lf",distance_to_dest);
     naza_m.fly_forward(cf, pca9685,20);
     while(1)
-      {
+    {
       latest_gps_data_sync = get_latest_gps_data();
       distance_to_dest = distance(_ftod(latest_gps_data_sync.lat), _ftod(latest_gps_data_sync.lon), _ftod(begin_lat2), _ftod(begin_lon2));
       if(distance_to_dest < 20){
         naza_m.fly_forward(cf, pca9685,0);
         if (debug)
         {
-        break;
+          break;
         }
       }
       if (debug)
@@ -300,7 +305,6 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
         break;
       }
     }
-
     in_mission = false;
     res.a_operation_status = 7;
   } else if (!airborne){
@@ -386,7 +390,16 @@ bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Reque
   {
     int live_heading = get_latest_gps_data().heading;
     in_mission = true;
-    naza_a.turn_to_deg(cf, pca9685, naza_m, req.a_operation_dir_in_deg, &live_heading);
+    naza_m.fly_turn_right(cf, pca9685, 20);
+    while(1){
+      if(in_Range(req.a_operation_dir_in_deg-10,req.a_operation_dir_in_deg+10, (uint)live_heading)){
+        naza_m.fly_turn_right(cf, pca9685, 0);
+        break;
+      }
+      if(debug){
+        break;
+      }
+    }
     in_mission = false;
     res.a_operation_status = 7;
     ROS_INFO("TURN TO  %i", req.a_operation_dir_in_deg);
@@ -426,7 +439,7 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "Command and Control Node");
   ros::NodeHandle n;
   pca9685.SetFrequency(50);
-  
+
   if (debug){
     home_point_sat_threshold = 0;
   } else {
