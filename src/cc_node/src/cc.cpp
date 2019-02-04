@@ -1,5 +1,6 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+#include "std_msgs/Bool.h"
 
 #include "cc_node/manual_action.h"
 #include "cc_node/a_operation_fly_to_pos.h"
@@ -8,6 +9,7 @@
 #include "cc_node/a_operation_stop_action_and_hover.h"
 #include "cc_node/a_operation_turn_to_direction.h"
 #include "cc_node/get_set_take_off_pos.h"
+#include "cc_node/drone_states.h"
 
 #include "gps_node/gps_raw.h"
 
@@ -461,6 +463,29 @@ int main(int argc, char **argv)
   ros::ServiceServer service6 = n.advertiseService("get_set_take_off_pos", get_set_take_off_pos);
 
   ROS_INFO("CC Node Up and Ready all Services are go!");
+
+  /*
+    CC Drone State Publisher
+  */
+  ros::Publisher cc_state_pub = n.advertise<cc_node::drone_states>("drone_state", 1000);
+
+  ros::Rate loop_rate(1000);
+
+  cc_node::drone_states cc_states;
+
+  int count = 0;
+  while (ros::ok())
+  {
+    cc_states.airborne = airborne;
+    cc_states.in_mission = in_mission;
+    cc_states.landing_phase = landing_phase;
+    cc_state_pub.publish(cc_states);
+
+    ros::spinOnce();
+
+    loop_rate.sleep();
+    ++count;
+  }
   ros::spin();
 
   return 0;

@@ -1076,17 +1076,56 @@ battery_node_generate_messages_eus/fast:
 .PHONY : battery_node_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named cc_node_gencpp
+# Target rules for targets named cc_node_generate_messages
 
 # Build rule for target.
-cc_node_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cc_node_gencpp
-.PHONY : cc_node_gencpp
+cc_node_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cc_node_generate_messages
+.PHONY : cc_node_generate_messages
 
 # fast build rule for target.
-cc_node_gencpp/fast:
-	$(MAKE) -f cc_node/CMakeFiles/cc_node_gencpp.dir/build.make cc_node/CMakeFiles/cc_node_gencpp.dir/build
-.PHONY : cc_node_gencpp/fast
+cc_node_generate_messages/fast:
+	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages.dir/build
+.PHONY : cc_node_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named cc_node_generate_messages_eus
+
+# Build rule for target.
+cc_node_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cc_node_generate_messages_eus
+.PHONY : cc_node_generate_messages_eus
+
+# fast build rule for target.
+cc_node_generate_messages_eus/fast:
+	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/build
+.PHONY : cc_node_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _cc_node_generate_messages_check_deps_manual_action
+
+# Build rule for target.
+_cc_node_generate_messages_check_deps_manual_action: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _cc_node_generate_messages_check_deps_manual_action
+.PHONY : _cc_node_generate_messages_check_deps_manual_action
+
+# fast build rule for target.
+_cc_node_generate_messages_check_deps_manual_action/fast:
+	$(MAKE) -f cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/build.make cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/build
+.PHONY : _cc_node_generate_messages_check_deps_manual_action/fast
+
+#=============================================================================
+# Target rules for targets named _cc_node_generate_messages_check_deps_drone_states
+
+# Build rule for target.
+_cc_node_generate_messages_check_deps_drone_states: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _cc_node_generate_messages_check_deps_drone_states
+.PHONY : _cc_node_generate_messages_check_deps_drone_states
+
+# fast build rule for target.
+_cc_node_generate_messages_check_deps_drone_states/fast:
+	$(MAKE) -f cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_drone_states.dir/build.make cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_drone_states.dir/build
+.PHONY : _cc_node_generate_messages_check_deps_drone_states/fast
 
 #=============================================================================
 # Target rules for targets named _cc_node_generate_messages_check_deps_a_operation_landing
@@ -1113,45 +1152,6 @@ cc_node_geneus: cmake_check_build_system
 cc_node_geneus/fast:
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_geneus.dir/build.make cc_node/CMakeFiles/cc_node_geneus.dir/build
 .PHONY : cc_node_geneus/fast
-
-#=============================================================================
-# Target rules for targets named cc_node_generate_messages
-
-# Build rule for target.
-cc_node_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cc_node_generate_messages
-.PHONY : cc_node_generate_messages
-
-# fast build rule for target.
-cc_node_generate_messages/fast:
-	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages.dir/build
-.PHONY : cc_node_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named _cc_node_generate_messages_check_deps_manual_action
-
-# Build rule for target.
-_cc_node_generate_messages_check_deps_manual_action: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _cc_node_generate_messages_check_deps_manual_action
-.PHONY : _cc_node_generate_messages_check_deps_manual_action
-
-# fast build rule for target.
-_cc_node_generate_messages_check_deps_manual_action/fast:
-	$(MAKE) -f cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/build.make cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/build
-.PHONY : _cc_node_generate_messages_check_deps_manual_action/fast
-
-#=============================================================================
-# Target rules for targets named cc_node_generate_messages_eus
-
-# Build rule for target.
-cc_node_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cc_node_generate_messages_eus
-.PHONY : cc_node_generate_messages_eus
-
-# fast build rule for target.
-cc_node_generate_messages_eus/fast:
-	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/build
-.PHONY : cc_node_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named _cc_node_generate_messages_check_deps_a_operation_fly_to_pos
@@ -1217,6 +1217,19 @@ _cc_node_generate_messages_check_deps_get_set_take_off_pos: cmake_check_build_sy
 _cc_node_generate_messages_check_deps_get_set_take_off_pos/fast:
 	$(MAKE) -f cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_get_set_take_off_pos.dir/build.make cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_get_set_take_off_pos.dir/build
 .PHONY : _cc_node_generate_messages_check_deps_get_set_take_off_pos/fast
+
+#=============================================================================
+# Target rules for targets named cc_node_gencpp
+
+# Build rule for target.
+cc_node_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cc_node_gencpp
+.PHONY : cc_node_gencpp
+
+# fast build rule for target.
+cc_node_gencpp/fast:
+	$(MAKE) -f cc_node/CMakeFiles/cc_node_gencpp.dir/build.make cc_node/CMakeFiles/cc_node_gencpp.dir/build
+.PHONY : cc_node_gencpp/fast
 
 #=============================================================================
 # Target rules for targets named _cc_node_generate_messages_check_deps_a_operation_turn_to_direction
@@ -3680,17 +3693,18 @@ help:
 	@echo "... _battery_node_generate_messages_check_deps_bat_stat"
 	@echo "... battery_node_generate_messages_nodejs"
 	@echo "... battery_node_generate_messages_eus"
-	@echo "... cc_node_gencpp"
+	@echo "... cc_node_generate_messages"
+	@echo "... cc_node_generate_messages_eus"
+	@echo "... _cc_node_generate_messages_check_deps_manual_action"
+	@echo "... _cc_node_generate_messages_check_deps_drone_states"
 	@echo "... _cc_node_generate_messages_check_deps_a_operation_landing"
 	@echo "... cc_node_geneus"
-	@echo "... cc_node_generate_messages"
-	@echo "... _cc_node_generate_messages_check_deps_manual_action"
-	@echo "... cc_node_generate_messages_eus"
 	@echo "... _cc_node_generate_messages_check_deps_a_operation_fly_to_pos"
 	@echo "... _cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover"
 	@echo "... _cc_node_generate_messages_check_deps_a_operation_liftoff"
 	@echo "... cc_node_genpy"
 	@echo "... _cc_node_generate_messages_check_deps_get_set_take_off_pos"
+	@echo "... cc_node_gencpp"
 	@echo "... _cc_node_generate_messages_check_deps_a_operation_turn_to_direction"
 	@echo "... cc_node_generate_messages_lisp"
 	@echo "... cc_node_genlisp"
