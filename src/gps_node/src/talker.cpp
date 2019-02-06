@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
   gps_node::gps_raw gps_data;
 
-  ros::Publisher chatter_pub = n.advertise<gps_node::gps_raw>("gps_raw", 100);
+  ros::Publisher chatter_pub = n.advertise<gps_node::gps_raw>("gps_raw", 1);
 
   ros::Rate loop_rate(1000);
 
