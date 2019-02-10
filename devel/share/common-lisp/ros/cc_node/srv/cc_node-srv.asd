@@ -14,6 +14,8 @@
     (:file "_package_a_operation_stop_action_and_hover" :depends-on ("_package"))
     (:file "a_operation_turn_to_direction" :depends-on ("_package_a_operation_turn_to_direction"))
     (:file "_package_a_operation_turn_to_direction" :depends-on ("_package"))
+    (:file "conf_states" :depends-on ("_package_conf_states"))
+    (:file "_package_conf_states" :depends-on ("_package"))
     (:file "get_set_take_off_pos" :depends-on ("_package_get_set_take_off_pos"))
     (:file "_package_get_set_take_off_pos" :depends-on ("_package"))
     (:file "manual_action" :depends-on ("_package_manual_action"))

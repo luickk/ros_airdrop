@@ -1154,6 +1154,19 @@ cc_node_geneus/fast:
 .PHONY : cc_node_geneus/fast
 
 #=============================================================================
+# Target rules for targets named _cc_node_generate_messages_check_deps_conf_states
+
+# Build rule for target.
+_cc_node_generate_messages_check_deps_conf_states: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _cc_node_generate_messages_check_deps_conf_states
+.PHONY : _cc_node_generate_messages_check_deps_conf_states
+
+# fast build rule for target.
+_cc_node_generate_messages_check_deps_conf_states/fast:
+	$(MAKE) -f cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/build.make cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/build
+.PHONY : _cc_node_generate_messages_check_deps_conf_states/fast
+
+#=============================================================================
 # Target rules for targets named _cc_node_generate_messages_check_deps_a_operation_fly_to_pos
 
 # Build rule for target.
@@ -3699,6 +3712,7 @@ help:
 	@echo "... _cc_node_generate_messages_check_deps_drone_states"
 	@echo "... _cc_node_generate_messages_check_deps_a_operation_landing"
 	@echo "... cc_node_geneus"
+	@echo "... _cc_node_generate_messages_check_deps_conf_states"
 	@echo "... _cc_node_generate_messages_check_deps_a_operation_fly_to_pos"
 	@echo "... _cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover"
 	@echo "... _cc_node_generate_messages_check_deps_a_operation_liftoff"

@@ -121,12 +121,14 @@
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/install.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/list_install_components.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/rebuild_cache.dir
+/home/pi/airdrop_ros/build/cc_node/CMakeFiles/edit_cache.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/cc_node_generate_messages.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/cc_node_generate_messages_eus.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_drone_states.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/cc_node_geneus.dir
+/home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir
@@ -143,7 +145,6 @@
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/cc_node_gennodejs.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/cc_node_generate_messages_py.dir
 /home/pi/airdrop_ros/build/cc_node/CMakeFiles/cc.dir
-/home/pi/airdrop_ros/build/cc_node/CMakeFiles/edit_cache.dir
 /home/pi/airdrop_ros/build/gps_node/CMakeFiles/install/local.dir
 /home/pi/airdrop_ros/build/gps_node/CMakeFiles/list_install_components.dir
 /home/pi/airdrop_ros/build/gps_node/CMakeFiles/test.dir

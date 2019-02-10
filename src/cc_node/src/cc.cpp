@@ -10,6 +10,7 @@
 #include "cc_node/a_operation_turn_to_direction.h"
 #include "cc_node/get_set_take_off_pos.h"
 #include "cc_node/drone_states.h"
+#include "cc_node/conf_states.h"
 
 #include "gps_node/gps_raw.h"
 
@@ -46,7 +47,7 @@ bool landing_phase=false;
 /*
   DEMO: only for testing purposes
 */
-bool debug = true;
+bool debug = false;
 
 gps_node::gps_raw gps_raw_startup_pos;
 
@@ -341,6 +342,16 @@ bool a_operation_landing(cc_node::a_operation_landing::Request  &req,
   return true;
 }
 
+bool conf_states(cc_node::conf_states::Request  &req,
+                  cc_node::conf_states::Response &res)
+{
+  airborne = req.airborne;
+  in_mission = req.in_mission;
+  landing_phase = req.landing_phase;
+
+  res.success=true;
+}
+
 bool a_operation_liftoff(cc_node::a_operation_liftoff::Request  &req,
                   cc_node::a_operation_liftoff::Response &res)
 {
@@ -390,10 +401,11 @@ bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Reque
 {
   if(req.a_operation_dir_in_deg != 0  && airborne)
   {
-    int live_heading = get_latest_gps_data().heading;
+    int live_heading;
     in_mission = true;
     naza_m.fly_turn_right(cf, pca9685, 20);
     while(1){
+      live_heading = get_latest_gps_data().heading;
       if(in_Range(req.a_operation_dir_in_deg-10,req.a_operation_dir_in_deg+10, (uint)live_heading)){
         naza_m.fly_turn_right(cf, pca9685, 0);
         break;
@@ -461,6 +473,8 @@ int main(int argc, char **argv)
   ros::ServiceServer service5 = n.advertiseService("a_operation_turn_to_direction", a_operation_turn_to_direction);
 
   ros::ServiceServer service6 = n.advertiseService("get_set_take_off_pos", get_set_take_off_pos);
+
+  ros::ServiceServer service7 = n.advertiseService("conf_states", conf_states);
 
   ROS_INFO("CC Node Up and Ready all Services are go!");
 

@@ -93,6 +93,7 @@ bool start_mission(mission_node::start_mission::Request  &req,
 
     if(fexists(string (path) + "/" + req.mission_name))
     {
+      ROS_INFO("Starting Mission");
       try {
         file_open.open (string (path) + "/" + string(req.mission_name));
         file_line = "";
@@ -228,6 +229,7 @@ bool start_mission(mission_node::start_mission::Request  &req,
   if(res.mission_status == 17) {
     res.mission_status = 18;
   }
+  ROS_INFO("Ending Mission");
 
   return true;
 }

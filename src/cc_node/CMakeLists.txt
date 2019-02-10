@@ -63,6 +63,7 @@ add_service_files(
   a_operation_turn_to_direction.srv
   get_set_take_off_pos.srv
   manual_action.srv
+  conf_states.srv
 )
 
 ## Generate actions in the 'action' folder

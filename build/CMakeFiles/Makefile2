@@ -109,7 +109,7 @@ CMakeFiles/run_tests.dir/all: rosbridge_suite/rosbridge_library/CMakeFiles/_run_
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
@@ -173,7 +173,7 @@ CMakeFiles/tests.dir/all: diagnostics/diagnostic_updater/CMakeFiles/diagnostic_u
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
@@ -423,7 +423,7 @@ rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_py.dir/all: rosbridge
 rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_py.dir/all: rosbridge_suite/rosapi/CMakeFiles/_rosapi_generate_messages_check_deps_ServiceResponseDetails.dir/all
 	$(MAKE) -f rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_py.dir/build.make rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_py.dir/depend
 	$(MAKE) -f rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_py.dir/build.make rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=59,60,61,62,63,64,65,66 "Built target rosapi_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=60,61,62,63,64,65,66,67 "Built target rosapi_generate_messages_py"
 .PHONY : rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -511,7 +511,7 @@ rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_cpp.dir/all: rosbridg
 rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_cpp.dir/all: rosbridge_suite/rosapi/CMakeFiles/_rosapi_generate_messages_check_deps_ServiceResponseDetails.dir/all
 	$(MAKE) -f rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_cpp.dir/build.make rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_cpp.dir/depend
 	$(MAKE) -f rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_cpp.dir/build.make rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=30,31,32,33,34,35,36 "Built target rosapi_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=31,32,33,34,35,36,37 "Built target rosapi_generate_messages_cpp"
 .PHONY : rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -759,7 +759,7 @@ rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_eus.dir/all: rosbridg
 rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_eus.dir/all: rosbridge_suite/rosapi/CMakeFiles/_rosapi_generate_messages_check_deps_ServiceResponseDetails.dir/all
 	$(MAKE) -f rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_eus.dir/build.make rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_eus.dir/depend
 	$(MAKE) -f rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_eus.dir/build.make rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=37,38,39,40,41,42,43,44 "Built target rosapi_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=38,39,40,41,42,43,44,45 "Built target rosapi_generate_messages_eus"
 .PHONY : rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1007,7 +1007,7 @@ rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_nodejs.dir/all: rosbr
 rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_nodejs.dir/all: rosbridge_suite/rosapi/CMakeFiles/_rosapi_generate_messages_check_deps_ServiceResponseDetails.dir/all
 	$(MAKE) -f rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_nodejs.dir/build.make rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_nodejs.dir/depend
 	$(MAKE) -f rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_nodejs.dir/build.make rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=52,53,54,55,56,57,58 "Built target rosapi_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=53,54,55,56,57,58,59 "Built target rosapi_generate_messages_nodejs"
 .PHONY : rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1447,7 +1447,7 @@ rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_lisp.dir/all: rosbrid
 rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_lisp.dir/all: rosbridge_suite/rosapi/CMakeFiles/_rosapi_generate_messages_check_deps_ServiceResponseDetails.dir/all
 	$(MAKE) -f rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_lisp.dir/build.make rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_lisp.dir/depend
 	$(MAKE) -f rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_lisp.dir/build.make rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=45,46,47,48,49,50,51 "Built target rosapi_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=46,47,48,49,50,51,52 "Built target rosapi_generate_messages_lisp"
 .PHONY : rosbridge_suite/rosapi/CMakeFiles/rosapi_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2640,6 +2640,7 @@ cc_node/clean: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_a
 cc_node/clean: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_drone_states.dir/clean
 cc_node/clean: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/clean
 cc_node/clean: cc_node/CMakeFiles/cc_node_geneus.dir/clean
+cc_node/clean: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/clean
 cc_node/clean: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/clean
 cc_node/clean: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/clean
 cc_node/clean: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/clean
@@ -2683,7 +2684,7 @@ all: cc_node/CMakeFiles/cc_node_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 cc_node/CMakeFiles/cc_node_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 cc_node/CMakeFiles/cc_node_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : cc_node/CMakeFiles/cc_node_generate_messages.dir/rule
@@ -2711,6 +2712,7 @@ cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: battery_node/CMakeFile
 cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_drone_states.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_eus.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
@@ -2872,6 +2874,38 @@ clean: cc_node/CMakeFiles/cc_node_geneus.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir
+
+# All Build rule for target.
+cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/all:
+	$(MAKE) -f cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/build.make cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/depend
+	$(MAKE) -f cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/build.make cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target _cc_node_generate_messages_check_deps_conf_states"
+.PHONY : cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/all
+
+# Build rule for subdir invocation for target.
+cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+.PHONY : cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/rule
+
+# Convenience name for target.
+_cc_node_generate_messages_check_deps_conf_states: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/rule
+
+.PHONY : _cc_node_generate_messages_check_deps_conf_states
+
+# clean rule for target.
+cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/clean:
+	$(MAKE) -f cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/build.make cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/clean
+.PHONY : cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/clean
+
+# clean rule for target.
+clean: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir
 
 # All Build rule for target.
@@ -2979,7 +3013,7 @@ cc_node/CMakeFiles/cc_node_genpy.dir/all: cc_node/CMakeFiles/cc_node_generate_me
 
 # Build rule for subdir invocation for target.
 cc_node/CMakeFiles/cc_node_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 cc_node/CMakeFiles/cc_node_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : cc_node/CMakeFiles/cc_node_genpy.dir/rule
@@ -3103,6 +3137,7 @@ cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: battery_node/CMakeFil
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_drone_states.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
@@ -3110,12 +3145,12 @@ cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_c
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/depend
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=10,11 "Built target cc_node_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=10,11,12 "Built target cc_node_generate_messages_lisp"
 .PHONY : cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : cc_node/CMakeFiles/cc_node_generate_messages_lisp.dir/rule
@@ -3147,7 +3182,7 @@ cc_node/CMakeFiles/cc_node_genlisp.dir/all: cc_node/CMakeFiles/cc_node_generate_
 
 # Build rule for subdir invocation for target.
 cc_node/CMakeFiles/cc_node_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 cc_node/CMakeFiles/cc_node_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : cc_node/CMakeFiles/cc_node_genlisp.dir/rule
@@ -3175,6 +3210,7 @@ cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: battery_node/CMakeF
 cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_drone_states.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
@@ -3182,7 +3218,7 @@ cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/
 cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/depend
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=12,13 "Built target cc_node_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=13,14 "Built target cc_node_generate_messages_nodejs"
 .PHONY : cc_node/CMakeFiles/cc_node_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3215,6 +3251,7 @@ cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: battery_node/CMakeFile
 cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_drone_states.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_cpp.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
@@ -3287,6 +3324,7 @@ cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: battery_node/CMakeFiles
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_manual_action.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_drone_states.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_landing.dir/all
+cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_conf_states.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_fly_to_pos.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_stop_action_and_hover.dir/all
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_liftoff.dir/all
@@ -3294,12 +3332,12 @@ cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all: cc_node/CMakeFiles/_cc_node_generate_messages_check_deps_a_operation_turn_to_direction.dir/all
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_py.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_py.dir/depend
 	$(MAKE) -f cc_node/CMakeFiles/cc_node_generate_messages_py.dir/build.make cc_node/CMakeFiles/cc_node_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=14,15,16 "Built target cc_node_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=15,16,17,18 "Built target cc_node_generate_messages_py"
 .PHONY : cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 cc_node/CMakeFiles/cc_node_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : cc_node/CMakeFiles/cc_node_generate_messages_py.dir/rule
@@ -3427,7 +3465,7 @@ gps_node/CMakeFiles/gps_node_generate_messages_py.dir/all: battery_node/CMakeFil
 gps_node/CMakeFiles/gps_node_generate_messages_py.dir/all: gps_node/CMakeFiles/_gps_node_generate_messages_check_deps_gps_raw.dir/all
 	$(MAKE) -f gps_node/CMakeFiles/gps_node_generate_messages_py.dir/build.make gps_node/CMakeFiles/gps_node_generate_messages_py.dir/depend
 	$(MAKE) -f gps_node/CMakeFiles/gps_node_generate_messages_py.dir/build.make gps_node/CMakeFiles/gps_node_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=23 "Built target gps_node_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=24 "Built target gps_node_generate_messages_py"
 .PHONY : gps_node/CMakeFiles/gps_node_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3598,7 +3636,7 @@ gps_node/CMakeFiles/gps_node_generate_messages_eus.dir/all: battery_node/CMakeFi
 gps_node/CMakeFiles/gps_node_generate_messages_eus.dir/all: gps_node/CMakeFiles/_gps_node_generate_messages_check_deps_gps_raw.dir/all
 	$(MAKE) -f gps_node/CMakeFiles/gps_node_generate_messages_eus.dir/build.make gps_node/CMakeFiles/gps_node_generate_messages_eus.dir/depend
 	$(MAKE) -f gps_node/CMakeFiles/gps_node_generate_messages_eus.dir/build.make gps_node/CMakeFiles/gps_node_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=22 "Built target gps_node_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=23 "Built target gps_node_generate_messages_eus"
 .PHONY : gps_node/CMakeFiles/gps_node_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3861,7 +3899,7 @@ mission_node/preinstall:
 mission_node/CMakeFiles/mn.dir/all:
 	$(MAKE) -f mission_node/CMakeFiles/mn.dir/build.make mission_node/CMakeFiles/mn.dir/depend
 	$(MAKE) -f mission_node/CMakeFiles/mn.dir/build.make mission_node/CMakeFiles/mn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=27 "Built target mn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=28 "Built target mn"
 .PHONY : mission_node/CMakeFiles/mn.dir/all
 
 # Include target in all.
@@ -3903,7 +3941,7 @@ mission_node/CMakeFiles/mission_node_genpy.dir/all: mission_node/CMakeFiles/miss
 
 # Build rule for subdir invocation for target.
 mission_node/CMakeFiles/mission_node_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : mission_node/CMakeFiles/mission_node_genpy.dir/rule
@@ -3932,12 +3970,12 @@ mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all: mission_node/
 mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
 	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_py.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_py.dir/depend
 	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_py.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=26 "Built target mission_node_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target mission_node_generate_messages_py"
 .PHONY : mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 mission_node/CMakeFiles/mission_node_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : mission_node/CMakeFiles/mission_node_generate_messages_py.dir/rule
@@ -3966,12 +4004,12 @@ mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all: mission_node
 mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
 	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/depend
 	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target mission_node_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=25 "Built target mission_node_generate_messages_cpp"
 .PHONY : mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : mission_node/CMakeFiles/mission_node_generate_messages_cpp.dir/rule
@@ -4000,12 +4038,12 @@ mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all: mission_node
 mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
 	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/depend
 	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=24 "Built target mission_node_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target mission_node_generate_messages_eus"
 .PHONY : mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : mission_node/CMakeFiles/mission_node_generate_messages_eus.dir/rule
@@ -4034,7 +4072,7 @@ mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/all: mission_nod
 mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/all: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
 	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/depend
 	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=25 "Built target mission_node_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=26 "Built target mission_node_generate_messages_lisp"
 .PHONY : mission_node/CMakeFiles/mission_node_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4112,7 +4150,7 @@ mission_node/CMakeFiles/mission_node_gennodejs.dir/all: mission_node/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 mission_node/CMakeFiles/mission_node_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : mission_node/CMakeFiles/mission_node_gennodejs.dir/rule
@@ -4144,7 +4182,7 @@ mission_node/CMakeFiles/mission_node_geneus.dir/all: mission_node/CMakeFiles/mis
 
 # Build rule for subdir invocation for target.
 mission_node/CMakeFiles/mission_node_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : mission_node/CMakeFiles/mission_node_geneus.dir/rule
@@ -4237,12 +4275,12 @@ mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all: mission_n
 mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all: mission_node/CMakeFiles/_mission_node_generate_messages_check_deps_start_mission.dir/all
 	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/depend
 	$(MAKE) -f mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/build.make mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target mission_node_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=27 "Built target mission_node_generate_messages_nodejs"
 .PHONY : mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/rule
@@ -4274,7 +4312,7 @@ mission_node/CMakeFiles/mission_node_gencpp.dir/all: mission_node/CMakeFiles/mis
 
 # Build rule for subdir invocation for target.
 mission_node/CMakeFiles/mission_node_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 mission_node/CMakeFiles/mission_node_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : mission_node/CMakeFiles/mission_node_gencpp.dir/rule
@@ -4370,7 +4408,7 @@ rc_node/CMakeFiles/rc.dir/all: mission_node/CMakeFiles/mission_node_generate_mes
 rc_node/CMakeFiles/rc.dir/all: mission_node/CMakeFiles/mission_node_generate_messages_nodejs.dir/all
 	$(MAKE) -f rc_node/CMakeFiles/rc.dir/build.make rc_node/CMakeFiles/rc.dir/depend
 	$(MAKE) -f rc_node/CMakeFiles/rc.dir/build.make rc_node/CMakeFiles/rc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=29 "Built target rc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=30 "Built target rc"
 .PHONY : rc_node/CMakeFiles/rc.dir/all
 
 # Include target in all.
@@ -4460,7 +4498,7 @@ diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_ro
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_multiple_match.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_multiple_match.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_multiple_match.launch.dir/rule
@@ -4525,7 +4563,7 @@ diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_ro
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_loader.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_loader.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_loader.launch.dir/rule
@@ -4558,7 +4596,7 @@ diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_ro
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_expected_stale.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_expected_stale.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_expected_stale.launch.dir/rule
@@ -4622,7 +4660,7 @@ diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator.di
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator.dir/rule
@@ -4695,7 +4733,7 @@ diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_ro
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest.dir/rule
@@ -4728,7 +4766,7 @@ diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_ro
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_agg.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_agg.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_agg.launch.dir/rule
@@ -5075,7 +5113,7 @@ clean: diagnostics/diagnostic_aggregator/CMakeFiles/run_tests_diagnostic_aggrega
 diagnostics/diagnostic_aggregator/CMakeFiles/diagnostic_aggregator.dir/all: diagnostics/diagnostic_aggregator/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f diagnostics/diagnostic_aggregator/CMakeFiles/diagnostic_aggregator.dir/build.make diagnostics/diagnostic_aggregator/CMakeFiles/diagnostic_aggregator.dir/depend
 	$(MAKE) -f diagnostics/diagnostic_aggregator/CMakeFiles/diagnostic_aggregator.dir/build.make diagnostics/diagnostic_aggregator/CMakeFiles/diagnostic_aggregator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=17,18 "Built target diagnostic_aggregator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=19,20 "Built target diagnostic_aggregator"
 .PHONY : diagnostics/diagnostic_aggregator/CMakeFiles/diagnostic_aggregator.dir/all
 
 # Include target in all.
@@ -5351,7 +5389,7 @@ diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_ro
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_add_agg.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_add_agg.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_aggregator/CMakeFiles/_run_tests_diagnostic_aggregator_rostest_test_launch_test_add_agg.launch.dir/rule
@@ -5411,7 +5449,7 @@ diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater.dir/all: 
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater.dir/rule
@@ -5513,7 +5551,7 @@ diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater_rostest.d
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater_rostest.dir/rule
@@ -5546,7 +5584,7 @@ diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest.
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest.dir/rule
@@ -5578,7 +5616,7 @@ diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater_rostest_t
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater_rostest_test_diagnostic_updater_test.xml.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater_rostest_test_diagnostic_updater_test.xml.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_updater/CMakeFiles/run_tests_diagnostic_updater_rostest_test_diagnostic_updater_test.xml.dir/rule
@@ -5611,7 +5649,7 @@ diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest_
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest_test_diagnostic_updater_fast_test.xml.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest_test_diagnostic_updater_fast_test.xml.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest_test_diagnostic_updater_fast_test.xml.dir/rule
@@ -5645,7 +5683,7 @@ diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest_
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest_test_diagnostic_updater_test.xml.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest_test_diagnostic_updater_test.xml.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater_rostest_test_diagnostic_updater_test.xml.dir/rule
@@ -5677,7 +5715,7 @@ diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater.dir/all:
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater.dir/rule
@@ -5704,12 +5742,12 @@ clean: diagnostics/diagnostic_updater/CMakeFiles/_run_tests_diagnostic_updater.d
 diagnostics/diagnostic_updater/CMakeFiles/diagnostic_updater_test.dir/all:
 	$(MAKE) -f diagnostics/diagnostic_updater/CMakeFiles/diagnostic_updater_test.dir/build.make diagnostics/diagnostic_updater/CMakeFiles/diagnostic_updater_test.dir/depend
 	$(MAKE) -f diagnostics/diagnostic_updater/CMakeFiles/diagnostic_updater_test.dir/build.make diagnostics/diagnostic_updater/CMakeFiles/diagnostic_updater_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=19 "Built target diagnostic_updater_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num= "Built target diagnostic_updater_test"
 .PHONY : diagnostics/diagnostic_updater/CMakeFiles/diagnostic_updater_test.dir/all
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_updater/CMakeFiles/diagnostic_updater_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_updater/CMakeFiles/diagnostic_updater_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_updater/CMakeFiles/diagnostic_updater_test.dir/rule
@@ -5803,7 +5841,7 @@ diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_commo
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest.dir/rule
@@ -5901,7 +5939,7 @@ diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_commo
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics.dir/rule
@@ -5966,7 +6004,7 @@ diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_commo
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest_test_launch_test_cpu_monitor.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest_test_launch_test_cpu_monitor.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest_test_launch_test_cpu_monitor.launch.dir/rule
@@ -6063,7 +6101,7 @@ diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_commo
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest_test_launch_test_cpu_monitor_level_ok.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest_test_launch_test_cpu_monitor_level_ok.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest_test_launch_test_cpu_monitor_level_ok.launch.dir/rule
@@ -6096,7 +6134,7 @@ diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_commo
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest_test_launch_test_cpu_monitor_level_warn.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest_test_launch_test_cpu_monitor_level_warn.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_common_diagnostics/CMakeFiles/_run_tests_diagnostic_common_diagnostics_rostest_test_launch_test_cpu_monitor_level_warn.launch.dir/rule
@@ -6198,7 +6236,7 @@ diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_nomina
 
 # Build rule for subdir invocation for target.
 diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_nominal_test.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_nominal_test.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_nominal_test.launch.dir/rule
@@ -6331,7 +6369,7 @@ diagnostics/self_test/CMakeFiles/_run_tests_self_test.dir/all: diagnostics/self_
 
 # Build rule for subdir invocation for target.
 diagnostics/self_test/CMakeFiles/_run_tests_self_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/self_test/CMakeFiles/_run_tests_self_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/self_test/CMakeFiles/_run_tests_self_test.dir/rule
@@ -6507,7 +6545,7 @@ diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest.dir/all: diagnosti
 
 # Build rule for subdir invocation for target.
 diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest.dir/rule
@@ -6540,7 +6578,7 @@ diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_no_id_
 
 # Build rule for subdir invocation for target.
 diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_no_id_test.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_no_id_test.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_no_id_test.launch.dir/rule
@@ -6637,7 +6675,7 @@ diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_error_
 
 # Build rule for subdir invocation for target.
 diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_error_test.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_error_test.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_error_test.launch.dir/rule
@@ -6670,7 +6708,7 @@ diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_except
 
 # Build rule for subdir invocation for target.
 diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_exception_test.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_exception_test.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/self_test/CMakeFiles/_run_tests_self_test_rostest_test_launch_exception_test.launch.dir/rule
@@ -6753,7 +6791,7 @@ diagnostics/self_test/test/preinstall:
 diagnostics/self_test/test/CMakeFiles/error_selftest.dir/all:
 	$(MAKE) -f diagnostics/self_test/test/CMakeFiles/error_selftest.dir/build.make diagnostics/self_test/test/CMakeFiles/error_selftest.dir/depend
 	$(MAKE) -f diagnostics/self_test/test/CMakeFiles/error_selftest.dir/build.make diagnostics/self_test/test/CMakeFiles/error_selftest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=20 "Built target error_selftest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=21 "Built target error_selftest"
 .PHONY : diagnostics/self_test/test/CMakeFiles/error_selftest.dir/all
 
 # Include target in all.
@@ -6790,7 +6828,7 @@ clean: diagnostics/self_test/test/CMakeFiles/error_selftest.dir/clean
 diagnostics/self_test/test/CMakeFiles/exception_selftest.dir/all:
 	$(MAKE) -f diagnostics/self_test/test/CMakeFiles/exception_selftest.dir/build.make diagnostics/self_test/test/CMakeFiles/exception_selftest.dir/depend
 	$(MAKE) -f diagnostics/self_test/test/CMakeFiles/exception_selftest.dir/build.make diagnostics/self_test/test/CMakeFiles/exception_selftest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=21 "Built target exception_selftest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=22 "Built target exception_selftest"
 .PHONY : diagnostics/self_test/test/CMakeFiles/exception_selftest.dir/all
 
 # Include target in all.
@@ -6827,7 +6865,7 @@ clean: diagnostics/self_test/test/CMakeFiles/exception_selftest.dir/clean
 diagnostics/self_test/test/CMakeFiles/no_id_selftest.dir/all:
 	$(MAKE) -f diagnostics/self_test/test/CMakeFiles/no_id_selftest.dir/build.make diagnostics/self_test/test/CMakeFiles/no_id_selftest.dir/depend
 	$(MAKE) -f diagnostics/self_test/test/CMakeFiles/no_id_selftest.dir/build.make diagnostics/self_test/test/CMakeFiles/no_id_selftest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=28 "Built target no_id_selftest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=29 "Built target no_id_selftest"
 .PHONY : diagnostics/self_test/test/CMakeFiles/no_id_selftest.dir/all
 
 # Include target in all.
@@ -7004,7 +7042,7 @@ diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_agg
 
 # Build rule for subdir invocation for target.
 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_match_no_analyze_analyzer_load.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_match_no_analyze_analyzer_load.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_match_no_analyze_analyzer_load.launch.dir/rule
@@ -7194,7 +7232,7 @@ diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_agg
 
 # Build rule for subdir invocation for target.
 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator.dir/rule
@@ -7230,7 +7268,7 @@ diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_agg
 
 # Build rule for subdir invocation for target.
 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest.dir/rule
@@ -7263,7 +7301,7 @@ diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_agg
 
 # Build rule for subdir invocation for target.
 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_match_no_analyze.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_match_no_analyze.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_match_no_analyze.launch.dir/rule
@@ -7364,7 +7402,7 @@ diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_agg
 
 # Build rule for subdir invocation for target.
 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_match_then_analyze.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_match_then_analyze.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_match_then_analyze.launch.dir/rule
@@ -7397,7 +7435,7 @@ diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_agg
 
 # Build rule for subdir invocation for target.
 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_fail_init.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_fail_init.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_fail_init.launch.dir/rule
@@ -7430,7 +7468,7 @@ diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_agg
 
 # Build rule for subdir invocation for target.
 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_dual_analyzer_load.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_dual_analyzer_load.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/test_diagnostic_aggregator/CMakeFiles/_run_tests_test_diagnostic_aggregator_rostest_test_launch_test_dual_analyzer_load.launch.dir/rule
@@ -7944,7 +7982,7 @@ diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis.dir/al
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis.dir/rule
@@ -7976,7 +8014,7 @@ diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis_nosete
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis_nosetests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis_nosetests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis_nosetests.dir/rule
@@ -8041,7 +8079,7 @@ diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis_nosete
 
 # Build rule for subdir invocation for target.
 diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis_nosetests_test.bag_csv_test.py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis_nosetests_test.bag_csv_test.py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : diagnostics/diagnostic_analysis/CMakeFiles/_run_tests_diagnostic_analysis_nosetests_test.bag_csv_test.py.dir/rule
@@ -8455,7 +8493,7 @@ rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_gencpp.dir/all: r
 
 # Build rule for subdir invocation for target.
 rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_gencpp.dir/rule
@@ -8592,7 +8630,7 @@ all: rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_mes
 
 # Build rule for subdir invocation for target.
 rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages.dir/rule
@@ -9081,7 +9119,7 @@ rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostes
 
 # Build rule for subdir invocation for target.
 rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostest.dir/rule
@@ -9192,12 +9230,12 @@ rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages
 rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/all: rosbridge_suite/rosbridge_library/CMakeFiles/_rosbridge_library_generate_messages_check_deps_TestResponseOnly.dir/all
 	$(MAKE) -f rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/build.make rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/depend
 	$(MAKE) -f rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/build.make rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=67,68,69,70,71,72 "Built target rosbridge_library_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/airdrop_ros/build/CMakeFiles --progress-num=68,69,70,71,72 "Built target rosbridge_library_generate_messages_cpp"
 .PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/rule
@@ -9525,7 +9563,7 @@ rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library.dir/al
 
 # Build rule for subdir invocation for target.
 rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library.dir/rule
@@ -9558,7 +9596,7 @@ rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostes
 
 # Build rule for subdir invocation for target.
 rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostest_test_capabilities_test_capabilities.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostest_test_capabilities_test_capabilities.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostest_test_capabilities_test_capabilities.test.dir/rule
@@ -9623,7 +9661,7 @@ rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostes
 
 # Build rule for subdir invocation for target.
 rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostest_test_internal_test_internal.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostest_test_internal_test_internal.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/airdrop_ros/build/CMakeFiles 0
 .PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/_run_tests_rosbridge_library_rostest_test_internal_test_internal.test.dir/rule
