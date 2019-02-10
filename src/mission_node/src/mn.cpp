@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <boost/asio.hpp>
 #include <fstream>
+#include <boost/filesystem.hpp>
 
 #include "ros/ros.h"
 #include "std_msgs/String.h"
@@ -243,25 +244,18 @@ bool list_missions(mission_node::list_missions::Request  &req,
                   mission_node::list_missions::Response &res)
 {
   const char *path = "/etc/airdrop/missions";
-  struct dirent *entry;
-  DIR *dir = opendir(path);
-
-  if (dir == NULL)
-  {
-    ROS_INFO("Mission dir not found");
-  }
-  string file_name = "";
-  ifstream file_open;
-
-  ros::NodeHandle n;
-
-  while ((entry = readdir(dir)) != NULL)
-  {
-    file_name = entry->d_name;
-    if(!(file_name == "." || file_name == ".."))
-    {
-      res.mission_list.push_back(file_name);
+  DIR *dir;
+  struct dirent *ent;
+  if ((dir = opendir ("/etc/airdrop/missions")) != NULL) {
+    while ((ent = readdir (dir)) != NULL) {
+      //printf ("%s\n", ent->d_name);
+      if (ent->d_name != "." || ent->d_name != ".." ){
+        res.mission_list.push_back(ent->d_name);    
+      }
     }
+    closedir (dir);
+  } else {
+    return EXIT_FAILURE;
   }
   return true;
 }
