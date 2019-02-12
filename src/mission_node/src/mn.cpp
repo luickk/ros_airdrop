@@ -100,6 +100,7 @@ bool start_mission(mission_node::start_mission::Request  &req,
         file_line = "";
         while(getline(file_open, file_line))
         {
+          if(file_line == " "){break;}
           vector<string> split_by_space = split(file_line, ' ');
 
           if(split_by_space[0] == "takeoff")
@@ -250,7 +251,7 @@ bool list_missions(mission_node::list_missions::Request  &req,
     while ((ent = readdir (dir)) != NULL) {
       //printf ("%s\n", ent->d_name);
       if (ent->d_name != "." || ent->d_name != ".." ){
-        res.mission_list.push_back(ent->d_name);    
+        res.mission_list.push_back(ent->d_name);
       }
     }
     closedir (dir);

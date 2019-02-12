@@ -220,6 +220,7 @@ bool set_take_off_pos_local()
     gps_raw_startup_pos = latest_gps_data;
     ROS_INFO("SET HOME POINT TO LATEST LOC");
   } else {
+    ROS_INFO("Not enough Sats available, minimum is %d ", home_point_sat_threshold);
     return false;
   }
   return true;
@@ -257,7 +258,11 @@ bool a_operation_fly_to_pos(cc_node::a_operation_fly_to_pos::Request  &req,
     lat1=(begin_lat1*3.14159)/180;
     lon1=(begin_lon1*3.14159)/180;
     londif=lon2-lon1;
-    ROS_INFO("FLYING TO POS  lat: %f, lon: %f FROM lat: %f lon: %f", req.pos_lat, req.pos_lon, begin_lat1, begin_lon1);
+    float pos_lat = req.pos_lat;
+    float pos_lon = req.pos_lon;
+
+
+    ROS_INFO("FLYING TO POS  lat: %f, lon: %f FROM lat: %f lon: %f", pos_lat, pos_lon, begin_lat1, begin_lon1);
 
     head=atan2((sin(londif)*cos(lat2)),((cos(lat1)*sin(lat2))-(sin(lat1)*cos(lat2)*cos(londif)))) ;
     finalans=(head*180)/3.14159;
@@ -368,7 +373,8 @@ bool a_operation_liftoff(cc_node::a_operation_liftoff::Request  &req,
       in_mission = false;
       airborne = true;
       res.a_operation_status = 7;
-      ROS_INFO("TOOK OFF TO HEIGHT  %i", req.a_operation_takeoff_height);
+      int a_operation_takeoff_height = req.a_operation_takeoff_height;
+      ROS_INFO("TOOK OFF TO HEIGHT  %d", a_operation_takeoff_height);
     } else {
       res.a_operation_status = 21;
     }
@@ -399,6 +405,7 @@ bool a_operation_stop_action_and_hover(cc_node::a_operation_stop_action_and_hove
 bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Request  &req,
                   cc_node::a_operation_turn_to_direction::Response &res)
 {
+  int exec_deg = req.a_operation_dir_in_deg;
   if(req.a_operation_dir_in_deg != 0  && airborne)
   {
     int live_heading;
@@ -406,7 +413,7 @@ bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Reque
     naza_m.fly_turn_right(cf, pca9685, 20);
     while(1){
       live_heading = get_latest_gps_data().heading;
-      if(in_Range(req.a_operation_dir_in_deg-10,req.a_operation_dir_in_deg+10, (uint)live_heading)){
+      if(in_Range(exec_deg-10,exec_deg+10, (uint)live_heading)){
         naza_m.fly_turn_right(cf, pca9685, 0);
         break;
       }
@@ -416,7 +423,7 @@ bool a_operation_turn_to_direction(cc_node::a_operation_turn_to_direction::Reque
     }
     in_mission = false;
     res.a_operation_status = 7;
-    ROS_INFO("TURN TO  %i", req.a_operation_dir_in_deg);
+    ROS_INFO("TURN TO  %d", exec_deg);
   } else if (!airborne){
     res.a_operation_status = 11;
   }
