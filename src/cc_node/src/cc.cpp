@@ -488,9 +488,9 @@ int main(int argc, char **argv)
   /*
     CC Drone State Publisher
   */
-  ros::Publisher cc_state_pub = n.advertise<cc_node::drone_states>("drone_state", 1);
+  ros::Publisher cc_state_pub = n.advertise<cc_node::drone_states>("drone_state", 50);
 
-  ros::Rate loop_rate(1);
+  ros::Rate loop_rate(50);
 
   cc_node::drone_states cc_states;
 
