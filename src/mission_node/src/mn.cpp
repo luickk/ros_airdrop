@@ -111,7 +111,28 @@ bool start_mission(mission_node::start_mission::Request  &req,
           while(getline(file_open, file_line))
           {
             vector<string> split_by_space = split(file_line, ' ');
-            if(split_by_space[0] == "takeoff")
+            if(split_by_space[0] == "wait")
+            {
+              if(split_by_space.size() == 2 && is_number(split_by_space[1]))
+              {
+                int time = atoi(split_by_space[1].c_str());
+                ROS_INFO("Waiting: %d",time);
+                sleep(time);
+              } else {
+                res.mission_status = 19;
+                break;
+              }
+            } else if(split_by_space[0] == "hover"){
+              if(split_by_space.size() == 1)
+              {
+                a_operation_stop_action_and_hover.request.a_operation_pausing_reason="unknown";
+                if (cl_a_operation_stop_action_and_hover.call(a_operation_stop_action_and_hover))
+                {}
+              } else {
+                res.mission_status = 19;
+                break;
+              }
+            } else if(split_by_space[0] == "takeoff")
             {
               if(split_by_space.size() == 2 && is_number(split_by_space[1]))
               {
