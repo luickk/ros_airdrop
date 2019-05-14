@@ -5,7 +5,7 @@ It consists of a number of ROS packages containing the core and mission critical
 
 ## Video
 
-media/drone-test.mp4
+https://www.youtube.com/watch?v=QzOBck26Hko
 
 ### Packages
 
