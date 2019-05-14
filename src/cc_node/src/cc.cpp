@@ -48,7 +48,7 @@ bool landing_phase=false;
 /*
   DEMO: only for testing purposes
 */
-bool debug = true;
+bool debug = false;
 
 gps_node::gps_raw gps_raw_startup_pos;
 

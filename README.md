@@ -3,6 +3,10 @@
 AirDrop is an autonomous Drone system, based on the open source [dji naza interface interface](https://github.com/MrGrimod/dji_naza_interface_c-). It's ment to deliver payloads quick and easy without relying on custom or second hand flight controller implementations. Instead, it relies on [an interface](https://github.com/MrGrimod/dji_naza_interface_c-), for any flight controller (currently using the DJI Naza V2), which allows the system to operate safe and predictable as well as open source.
 It consists of a number of ROS packages containing the core and mission critical nodes. The Web Interface for remote controle can be found [here](https://github.com/MrGrimod/web_airdrop).
 
+## Video
+
+media/drone-test.mp4
+
 ### Packages
 
 - Command & Control (CC) node (planned) <br>
