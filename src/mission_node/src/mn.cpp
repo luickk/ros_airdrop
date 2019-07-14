@@ -177,7 +177,7 @@ bool start_mission(mission_node::start_mission::Request  &req,
             } else if(split_by_space[0] == "flyto"){
               float lat, lon;
               int alt;
-              if(split_by_space.size() == 4 && is_float(split_by_space[1]) && is_float(split_by_space[2]) && is_number(split_by_space[3]))
+              if(split_by_space.size() == 3 && is_float(split_by_space[1]) && is_float(split_by_space[2]) && is_number(split_by_space[3]))
               {
                 lat= atof(split_by_space[1].c_str());
                 lon= atof(split_by_space[2].c_str());
@@ -199,7 +199,7 @@ bool start_mission(mission_node::start_mission::Request  &req,
                   break;
                 }
               } else {
-                res.mission_status = 19;
+                res.  = 19;
                 break;
               }
             } else if(split_by_space[0] == "turnto"){
